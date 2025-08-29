@@ -1,4 +1,4 @@
-// Anton
+// Anton (prob not optimized)
 
 public class Tribonacci {
     public int tribonacci(int n){
