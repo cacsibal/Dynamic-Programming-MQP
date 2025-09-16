@@ -9,8 +9,7 @@ class Solution {
                     dp[i]=Math.max(dp[i],dp[j]+1);
                 }
             }
-            max =Math.max(max,dp[i]);
-            System.out.println(dp[i]);
+            max = Math.max(max,dp[i]);
         }
         
         return max;
