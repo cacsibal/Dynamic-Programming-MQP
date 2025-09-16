@@ -1,4 +1,4 @@
-class Solution {
+class JumpGame2 {
     public int jump(int[] nums) {
         if(nums.length<=1)
             return 0;
@@ -16,4 +16,5 @@ class Solution {
             dist=newdist;
         }
     }
+
 }
