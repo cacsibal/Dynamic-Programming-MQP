@@ -3,11 +3,15 @@ package BottomUp;
 public class Pascal {
 
     public int[][] pascal(int n) {
-        // initialization
+        /**
+         * Initialization
+         */
         int[][] dp = new int[n][n];
         dp[0][0] = 1;
 
-        // maximization
+        /**
+         * Iterative solution
+         */
         for (int r = 1; r < n; r++) {
             dp[r][0] = 1;
             for (int c = 1; c <= r; c++) {
@@ -15,7 +19,9 @@ public class Pascal {
             }
         }
 
-        // return
+        /**
+         * Return tree of size n
+         */
         return dp;
     }
 }
