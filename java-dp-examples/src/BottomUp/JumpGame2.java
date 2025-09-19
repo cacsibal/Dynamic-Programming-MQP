@@ -1,10 +1,20 @@
 class JumpGame2 {
     public int jump(int[] nums) {
+        /**
+         * Edge case
+         */
         if(nums.length<=1)
             return 0;
 
+        /**
+         * Initialization
+         */
         int lastDist=0;
         int dist = 0;
+
+        /**
+         * Iterative solution
+         */
         for(int i = 1;true;i++){
             int newdist=dist;
             for(int j = lastDist;j<=dist;j++){

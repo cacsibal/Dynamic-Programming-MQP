@@ -3,14 +3,18 @@ package BottomUp;
 public class LongestIncreasingSubsequence {
     public int lengthOfLIS(int[] nums) {
 
-        //initialization
+        /**
+         * Initialization
+         */
         int[] dp = new int[nums.length];
         int max=0;
         for(int i=0;i<dp.length;i++) {
             dp[i]=1;
         }
 
-        //maximization
+        /**
+         * Iterative solution
+         */
         for(int i=0;i<dp.length;i++){
             for(int j=0;j<i;j++){
                 if(nums[j]<nums[i]){
@@ -20,7 +24,9 @@ public class LongestIncreasingSubsequence {
             max = Math.max(max,dp[i]);
         }
 
-        //return
+        /**
+         * Return maximum longest increasing subsequence.
+         */
         return max;
     }
 }
