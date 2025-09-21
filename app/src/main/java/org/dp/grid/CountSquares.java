@@ -1,4 +1,4 @@
-package org.dp;
+package org.dp.grid;
 
 import org.utils.MatrixUtils;
 import org.utils.MathUtils;

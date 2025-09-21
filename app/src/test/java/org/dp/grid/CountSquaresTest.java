@@ -1,7 +1,7 @@
-package org.dp;
+package org.dp.grid;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MinPathSumTest {
+class CountSquaresTest {
 
 }
