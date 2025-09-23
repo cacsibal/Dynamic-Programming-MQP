@@ -10,7 +10,7 @@ class LongestIncreasingSubsequenceTest {
         LongestIncreasingSubsequence testSubsequence = new LongestIncreasingSubsequence();
         int[] vals = new int[] { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
 
-        assertEquals(6, testSubsequence.lengthOfLIS(vals));
+        assertEquals(6, testSubsequence.solution(vals));
     }
 
     /** https://www.geeksforgeeks.org/dsa/longest-increasing-subsequence-dp-3/ */
@@ -19,6 +19,6 @@ class LongestIncreasingSubsequenceTest {
         LongestIncreasingSubsequence testSubsequence = new LongestIncreasingSubsequence();
         int[] vals = new int[] { 3, 10, 2, 1, 20};
 
-        assertEquals(3, testSubsequence.lengthOfLIS(vals));
+        assertEquals(3, testSubsequence.solution(vals));
     }
 }

@@ -10,13 +10,13 @@ class PerfectSquaresTest {
     void test12() {
         PerfectSquares testSquares = new PerfectSquares();
 
-        assertEquals(3, testSquares.numSquares(12));
+        assertEquals(3, testSquares.solution(12));
     }
 
     @Test
     void test13() {
         PerfectSquares testSquares = new PerfectSquares();
 
-        assertEquals(2, testSquares.numSquares(13));
+        assertEquals(2, testSquares.solution(13));
     }
 }

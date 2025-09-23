@@ -1,12 +1,16 @@
 package org.dp.grid;
 
 public class MinPathSum {
-    public int minPathSum(int[][] grid) {
-        // initialization
+    public int solution(int[][] grid) {
+        /**
+         * Initialization
+         */
         int len1 = grid.length;
         int len2 = grid[0].length;
 
-        // maximization
+        /**
+         * Iterative Solution
+         */
         for(int r = 0; r < len1; r++) {
             for(int c = 0; c < len2; c++) {
                 if(r > 0 && c > 0) {
@@ -19,7 +23,9 @@ public class MinPathSum {
             }
         }
 
-        // return
+        /**
+         * Return the bottom right element
+         */
         return grid[len1 - 1][len2 - 1];
     }
 }

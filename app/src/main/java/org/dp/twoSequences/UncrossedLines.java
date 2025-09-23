@@ -1,14 +1,18 @@
 package org.dp.twoSequences;
 
 public class UncrossedLines {
-    public int maxUncrossedLines(int[] nums1, int[] nums2) {
-        // initialization
+    public int solution(int[] nums1, int[] nums2) {
+        /**
+         * Initialization
+         */
         int len1 = nums1.length;
         int len2 = nums2.length;
 
         int[][] dp = new int[len1 + 1][len2 + 1];
 
-        // maximization
+        /**
+         * Iterative solution
+         */
         for(int r = 0; r < len1; r++) {
             for(int c = 0; c < len2; c++) {
                 if(nums1[r] == nums2[c]) {
@@ -19,7 +23,9 @@ public class UncrossedLines {
             }
         }
 
-        // return
+        /**
+         * return bottom right element
+         */
         return dp[len1][len2];
     }
 }

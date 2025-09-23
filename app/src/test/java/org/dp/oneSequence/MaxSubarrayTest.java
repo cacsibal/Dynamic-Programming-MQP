@@ -10,7 +10,7 @@ class MaxSubarrayTest {
         MaxSubarray testSubarray = new MaxSubarray();
         int[] vals = new int[] {1,1,1,1,1};
 
-        assertEquals(5, testSubarray.maxSubArray(vals));
+        assertEquals(5, testSubarray.solution(vals));
     }
 
     @Test
@@ -18,6 +18,6 @@ class MaxSubarrayTest {
         MaxSubarray testSubarray = new MaxSubarray();
         int[] vals = new int[] {-2,1,-3,4,-1,2,1,-5,4};
 
-        assertEquals(6, testSubarray.maxSubArray(vals));
+        assertEquals(6, testSubarray.solution(vals));
     }
 }

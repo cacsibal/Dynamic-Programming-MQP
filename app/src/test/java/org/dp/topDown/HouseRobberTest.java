@@ -10,6 +10,6 @@ class HouseRobberTest {
     public void test() {
         HouseRobber hr = new HouseRobber();
         int[] input = {2,7,9,3,1};
-        assertEquals(12, hr.rob(input));
+        assertEquals(12, hr.solution(input));
     }
 }
