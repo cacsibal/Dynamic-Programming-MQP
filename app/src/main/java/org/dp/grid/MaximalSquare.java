@@ -1,15 +1,19 @@
 package org.dp.grid;
 
 public class MaximalSquare {
-    public int maximalSquare(char[][] matrix) {
-        // initialization
+    public int solution(char[][] matrix) {
+        /**
+         * Initialization
+         */
         int len1 = matrix.length;
         int len2 = matrix[0].length;
 
         int[][] dp = new int[len1][len2];
         int maxLength = 0;
 
-        // maximization
+        /**
+         * Iterative solution
+         */
         for(int r = 0; r < len1; r++){
             for(int c = 0; c < len2; c++){
                 if(r == 0 || c == 0 || matrix[r][c] == '0') {
@@ -25,7 +29,9 @@ public class MaximalSquare {
             }
         }
 
-        // return
+        /**
+         * Return maximum square length
+         */
         return maxLength * maxLength;
     }
 }

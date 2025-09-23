@@ -27,6 +27,7 @@ public class WordBreak {
         return false;
     }
 
+    // todo: move test cases to java.org.dp."..."
     public static void main(String[] args) {
         WordBreak solver = new WordBreak();
         System.out.println(solver.wordBreak("leetcode", Arrays.asList("leet","code"))); // true

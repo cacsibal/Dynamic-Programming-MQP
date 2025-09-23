@@ -13,7 +13,7 @@ class CountSquaresTest {
                 new int[] {0, 1, 1, 1}
         };
 
-        assertEquals(15, countSquares.countSquares(matrix));
+        assertEquals(15, countSquares.solution(matrix));
     }
 
     @Test void test2() {
@@ -25,6 +25,6 @@ class CountSquaresTest {
                 new int[] {1, 1, 0}
         };
 
-        assertEquals(7, countSquares.countSquares(matrix));
+        assertEquals(7, countSquares.solution(matrix));
     }
 }

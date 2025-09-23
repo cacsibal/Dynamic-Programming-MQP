@@ -1,12 +1,14 @@
 package org.dp.topDown;
 
+import java.util.Arrays;
+
 public class HouseRobber {
 
     public int rob(int[] nums) {
         int n = nums.length;
         // dp[i] = max money from house i onwards, -1 means uncomputed
         int[] dp = new int[n];
-        java.util.Arrays.fill(dp, -1);
+        Arrays.fill(dp, -1);
 
         return helper(nums, 0, dp);
     }
