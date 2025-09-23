@@ -1,4 +1,4 @@
-package BottomUp;
+package org.dp.oneSequence;
 
 public class LongestIncreasingSubsequence {
     public int lengthOfLIS(int[] nums) {
