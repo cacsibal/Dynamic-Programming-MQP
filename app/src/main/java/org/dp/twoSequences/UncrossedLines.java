@@ -1,7 +1,5 @@
 package org.dp.twoSequences;
 
-import org.utils.MathUtils;
-
 public class UncrossedLines {
     public int maxUncrossedLines(int[] nums1, int[] nums2) {
         // initialization
@@ -16,7 +14,7 @@ public class UncrossedLines {
                 if(nums1[r] == nums2[c]) {
                     dp[r + 1][c + 1] = dp[r][c] + 1;
                 } else {
-                    dp[r + 1][c + 1] = MathUtils.max(dp[r][c + 1], dp[r + 1][c]);
+                    dp[r + 1][c + 1] = Math.max(dp[r][c + 1], dp[r + 1][c]);
                 }
             }
         }

@@ -1,7 +1,5 @@
 package org.dp.twoSequences;
 
-import org.utils.MathUtils;
-
 public class LongestCommonSubsequence {
     public int longestCommonSubsequence(String s1, String s2) {
         // initialization
@@ -16,7 +14,7 @@ public class LongestCommonSubsequence {
                 if(s1.charAt(r) == s2.charAt(c)) {
                     dp[r + 1][c + 1] = dp[r][c] + 1;
                 } else {
-                    dp[r + 1][c + 1] = MathUtils.max(dp[r][c + 1], dp[r + 1][c]);
+                    dp[r + 1][c + 1] = Math.max(dp[r][c + 1], dp[r + 1][c]);
                 }
             }
         }

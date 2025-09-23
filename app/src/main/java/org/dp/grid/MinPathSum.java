@@ -1,7 +1,5 @@
 package org.dp.grid;
 
-import org.utils.*;
-
 public class MinPathSum {
     public int minPathSum(int[][] grid) {
         // initialization
@@ -12,7 +10,7 @@ public class MinPathSum {
         for(int r = 0; r < len1; r++) {
             for(int c = 0; c < len2; c++) {
                 if(r > 0 && c > 0) {
-                    grid[r][c] = MathUtils.min(grid[r - 1][c], grid[r][c - 1]);
+                    grid[r][c] = Math.min(grid[r - 1][c], grid[r][c - 1]);
                 } else if(r > 0) {
                     grid[r][0] += grid[r - 1][0];
                 } else if(c > 0) {

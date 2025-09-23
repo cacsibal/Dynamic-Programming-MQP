@@ -1,7 +1,5 @@
 package org.dp.grid;
 
-import org.utils.MathUtils;
-
 public class MaximalSquare {
     public int maximalSquare(char[][] matrix) {
         // initialization
