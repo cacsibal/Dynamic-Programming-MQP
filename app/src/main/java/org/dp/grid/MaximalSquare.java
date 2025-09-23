@@ -19,9 +19,9 @@ public class MaximalSquare {
                         dp[r][c] = 0;
                     }
                 } else {
-                    dp[r][c] = MathUtils.min(dp[r - 1][c - 1], MathUtils.min(dp[r - 1][c], dp[r][c - 1])) + 1;
+                    dp[r][c] = Math.min(dp[r - 1][c - 1], Math.min(dp[r - 1][c], dp[r][c - 1])) + 1;
                 }
-                maxLength = MathUtils.max(maxLength, dp[r][c]);
+                maxLength = Math.max(maxLength, dp[r][c]);
             }
         }
 
