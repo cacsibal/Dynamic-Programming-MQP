@@ -10,7 +10,7 @@ public class Pascal {
     private HashMap<Integer[], Integer> memo = new HashMap<>();
 
 
-    public int pascal(int r, int c) {
+    public int solution(int r, int c) {
 
         /**
          * Base Case

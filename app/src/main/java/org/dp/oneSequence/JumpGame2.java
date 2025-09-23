@@ -1,7 +1,7 @@
 package org.dp.oneSequence;
 
 class JumpGame2 {
-    public int jump(int[] nums) {
+    public int solution(int[] nums) {
         /**
          * Edge case
          */

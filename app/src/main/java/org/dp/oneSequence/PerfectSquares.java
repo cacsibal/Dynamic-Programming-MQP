@@ -1,7 +1,7 @@
 package org.dp.oneSequence;
 
 class PerfectSquares {
-    public int numSquares(int n) {
+    public int solution(int n) {
 
         /**
          * Initializion

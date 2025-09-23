@@ -1,7 +1,7 @@
 package org.dp.oneSequence;
 
 public class LongestIncreasingSubsequence {
-    public int lengthOfLIS(int[] nums) {
+    public int solution(int[] nums) {
 
         /**
          * Initialization

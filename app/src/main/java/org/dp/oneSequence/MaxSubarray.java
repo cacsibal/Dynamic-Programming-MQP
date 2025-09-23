@@ -1,7 +1,7 @@
 package org.dp.oneSequence;
 
 class MaxSubarray {
-    public int maxSubArray(int[] nums) {
+    public int solution(int[] nums) {
 
         /**
          * Initialization
