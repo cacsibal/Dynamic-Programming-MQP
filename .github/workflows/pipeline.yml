@@ -6,7 +6,7 @@ on:
       - anton     # This workflow will only run on pushes to the 'devel' branch
   pull_request:
     branches:
-      - anton     # This workflow will only run on pull requests targeting the 'devel' branch
+      - Michael     # This workflow will only run on pull requests targeting the 'devel' branch
 
 jobs:
   build-and-test:

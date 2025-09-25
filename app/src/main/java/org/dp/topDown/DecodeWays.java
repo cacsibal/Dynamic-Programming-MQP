@@ -2,7 +2,7 @@ package org.dp.topDown;
 
 public class DecodeWays {
 
-    public int numDecodings(String s) {
+    public int solution(String s) {
         int n = s.length();
         int[] dp = new int[n];
         java.util.Arrays.fill(dp, -1);
@@ -11,22 +11,24 @@ public class DecodeWays {
     }
 
     private int helper(String s, int i, int[] dp) {
-        // Base case: reached end successfully
+        /**
+         * initialization
+         */
         if (i == s.length()) {
             return 1;
         }
 
-        // Leading zero is invalid
         if (s.charAt(i) == '0') {
             return 0;
         }
 
-        // Already computed
         if (dp[i] != -1) {
             return dp[i];
         }
 
-        // Option 1: take one digit
+        /**
+         * iterative solution
+         */
         int ways = helper(s, i + 1, dp);
 
         // Option 2: take two digits (if valid 10–26)

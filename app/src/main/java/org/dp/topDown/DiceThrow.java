@@ -5,6 +5,9 @@ public class DiceThrow {
     static int countRecur(int m, int n, int x, int[][] memo) {
 
         // Base case: Valid combination
+        /**
+         * initialization
+         */
         if (n == 0 && x == 0) return 1;
 
         // Base case: Invalid combination
@@ -15,7 +18,9 @@ public class DiceThrow {
 
         int ans = 0;
 
-        // Check for all values of m.
+        /**
+         * iterative
+         */
         for (int i = 1; i <= m; i++) {
             ans += countRecur(m, n - 1, x - i, memo);
         }
@@ -23,7 +28,7 @@ public class DiceThrow {
         return memo[n][x] = ans;
     }
 
-    public int noOfWays(int m, int n, int x) {
+    public int solution(int m, int n, int x) {
 
         int[][] memo = new int[n + 1][x + 1];
         for (int[] row : memo) Arrays.fill(row, -1);

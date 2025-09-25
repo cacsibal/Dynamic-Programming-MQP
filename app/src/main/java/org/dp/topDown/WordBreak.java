@@ -4,7 +4,10 @@ import java.util.*;
 
 public class WordBreak {
 
-    public boolean wordBreak(String s, List<String> wordDict) {
+    public boolean solution(String s, List<String> wordDict) {
+        /**
+         * initialization
+         */
         Set<String> dict = new HashSet<>(wordDict);
         Boolean[] memo = new Boolean[s.length()];
         return helper(s, 0, dict, memo);
@@ -14,7 +17,9 @@ public class WordBreak {
         if (start == s.length()) return true;
 
         if (memo[start] != null) return memo[start];
-
+/**
+ * iterative solution
+ */
         for (int end = start + 1; end <= s.length(); end++) {
             String word = s.substring(start, end);
             if (dict.contains(word) && helper(s, end, dict, memo)) {
@@ -25,14 +30,6 @@ public class WordBreak {
 
         memo[start] = false;
         return false;
-    }
-
-    // todo: move test cases to java.org.dp."..."
-    public static void main(String[] args) {
-        WordBreak solver = new WordBreak();
-        System.out.println(solver.wordBreak("leetcode", Arrays.asList("leet","code"))); // true
-        System.out.println(solver.wordBreak("applepenapple", Arrays.asList("apple","pen"))); // true
-        System.out.println(solver.wordBreak("catsandog", Arrays.asList("cats","dog","sand","and","cat"))); // false
     }
 }
 
