@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PerfectSquaresTest {
 
+    /** https://leetcode.com/problems/perfect-squares/description/ */
     @Test
     void test12() {
         PerfectSquares testSquares = new PerfectSquares();

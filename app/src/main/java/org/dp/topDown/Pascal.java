@@ -1,7 +1,20 @@
 package org.dp.topDown;
 
 import java.util.HashMap;
-
+/**
+ *  Pascal: Returns the number in pascal's triangle at row r and column c
+ *
+ *  dynprog solution:
+ *  pasc <- {
+ *      P[n,1] <- 1
+ *      P[1,m] <- 0
+ *      P[n,m] <- P[n-1,m-1] + P[n-1,m]
+ *  } %where% {
+ *      n <- 1:20
+ *      m <- 1:20
+ *  }
+ *
+ */
 public class Pascal {
 
     /**

@@ -1,5 +1,13 @@
 package org.dp.oneSequence;
 
+
+/**
+ * JumpGame2: placeholder description
+ *
+ * dynprog solution:
+ *
+ *
+ */
 class JumpGame2 {
     public int jump(int[] nums) {
         /**
