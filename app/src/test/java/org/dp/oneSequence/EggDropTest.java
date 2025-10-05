@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class eggDropTest {
+class EggDropTest {
     @Test
     void eggDrop() {
         eggDrop testeggDrop = new eggDrop();
