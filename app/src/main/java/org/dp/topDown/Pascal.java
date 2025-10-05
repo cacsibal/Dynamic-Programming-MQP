@@ -20,7 +20,7 @@ public class Pascal {
     /**
      * Create Cache
      */
-    private HashMap<Integer[],Integer> memo = new HashMap<>();
+    private HashMap<Integer,Integer> memo = new HashMap<>();
 
 
     public int pascal(int r, int c) {
@@ -36,7 +36,8 @@ public class Pascal {
         /**
          * Memoize
          */
-        Integer[] key = {r,c};
+        int s=r+c;
+        Integer key = (s*(s+1))/2+r;
         if(!memo.containsKey(key)){
             memo.put(key,pascal(r-1,c-1)+pascal(r-1,c));
         }
