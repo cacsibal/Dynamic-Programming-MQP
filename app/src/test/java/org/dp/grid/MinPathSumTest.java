@@ -30,4 +30,16 @@ class MinPathSumTest {
 
         assertEquals(12, testMinPathSum.solution(matrix));
     }
+
+    /**
+     * edge case of a 1x1 matrix
+     */
+    @Test void test3() {
+        MinPathSum testMinPathSum = new MinPathSum();
+        int[][] matrix = new int[][] {
+                new int[] {0}
+        };
+
+        assertEquals(0, testMinPathSum.solution(matrix));
+    }
 }
