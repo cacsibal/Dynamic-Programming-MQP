@@ -1,14 +1,23 @@
 package org.dp.twoSequences;
 
 public class UncrossedLines {
+    int[] nums1;
+    int[] nums2;
+    int len1;
+    int len2;
+    int[][] dp;
+
     public int solution(int[] nums1, int[] nums2) {
         /**
          * Initialization
          */
-        int len1 = nums1.length;
-        int len2 = nums2.length;
+        this.nums1 = nums1;
+        this.nums2 = nums2;
 
-        int[][] dp = new int[len1 + 1][len2 + 1];
+        len1 = nums1.length;
+        len2 = nums2.length;
+
+        dp = new int[len1 + 1][len2 + 1];
 
         /**
          * Iterative solution
@@ -27,5 +36,9 @@ public class UncrossedLines {
          * return bottom right element
          */
         return dp[len1][len2];
+    }
+
+    public int retrieve() {
+        return -1;
     }
 }
