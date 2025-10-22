@@ -2,7 +2,7 @@ package org.dp.topDown;
 
 import java.util.HashMap;
 /**
- *  Pascal: Returns the number in pascal's triangle at row r and column c
+ *  Pascal: Returns the number in solution's triangle at row r and column c
  *
  *  dynprog solution:
  *  pasc <- {
@@ -23,7 +23,7 @@ public class Pascal {
     private HashMap<Integer,Integer> memo = new HashMap<>();
 
 
-    public int pascal(int r, int c) {
+    public int solution(int r, int c) {
 
         /**
          * Base Case
@@ -39,7 +39,7 @@ public class Pascal {
         int s=r+c;
         Integer key = (s*(s+1))/2+r;
         if(!memo.containsKey(key)){
-            memo.put(key,pascal(r-1,c-1)+pascal(r-1,c));
+            memo.put(key, solution(r-1,c-1)+ solution(r-1,c));
         }
 
         return memo.get(key);
