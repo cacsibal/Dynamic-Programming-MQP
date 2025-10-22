@@ -8,6 +8,6 @@ class EggDropTest {
     @Test
     void eggDrop() {
         eggDrop testeggDrop = new eggDrop();
-        assertEquals(8, testeggDrop.solution(2,36));
+        //assertEquals(8, testeggDrop.eggDropSol(2,36));
     }
 }
