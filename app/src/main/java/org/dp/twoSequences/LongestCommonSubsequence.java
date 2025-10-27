@@ -1,14 +1,23 @@
 package org.dp.twoSequences;
 
 public class LongestCommonSubsequence {
+    String s1;
+    String s2;
+    int len1;
+    int len2;
+    int[][] dp;
+
     public int solution(String s1, String s2) {
         /**
          * Initialization
          */
-        int len1 = s1.length();
-        int len2 = s2.length();
+        this.s1 = s1;
+        this.s2 = s2;
 
-        int[][] dp = new int[len1 + 1][len2 + 1];
+        len1 = s1.length();
+        len2 = s2.length();
+
+        dp = new int[len1 + 1][len2 + 1];
 
         /**
          * Iterative solution
@@ -27,6 +36,29 @@ public class LongestCommonSubsequence {
          * Return bottom right element
          */
         return dp[len1][len2];
+    }
+
+    public String retrieve() {
+        int lcsLength = dp[len1][len2];
+        char[] path = new char[lcsLength];
+
+        int r = len1, c = len2;
+        int index = lcsLength - 1;
+
+        while(r > 0 && c > 0) {
+            if(s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                path[index] = s1.charAt(r - 1);
+                index--;
+                r--;
+                c--;
+            } else if(dp[r - 1][c] > dp[r][c - 1]) {
+                r--;
+            } else {
+                c--;
+            }
+        }
+
+        return new String(path);
     }
 }
 

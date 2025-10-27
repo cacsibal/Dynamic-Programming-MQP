@@ -1,5 +1,22 @@
 package org.dp.grid;
 
+/**
+ * Minimum Path Sum: Given an m x n grid filled with non-negative numbers,
+ * find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+ * (<a href="https://leetcode.com/problems/minimum-path-sum/">...</a>)
+ *
+ * <code>
+ * minpath <- {
+ *   M[1,1] <- grid[1,1]
+ *   M[1,j] <- M[1, j-1] + grid[1,j]
+ *   M[i,1] <- M[i-1, 1] + grid[i,1]
+ *   M[i,j] <- min(M[i-1,j], M[i,j-1]) + grid[i,j]
+ * } %where% {
+ *   i <- 1:nrow(grid)
+ *   j <- 1:ncol(grid)
+ * }
+ * </code>
+ */
 public class MinPathSum {
     public int solution(int[][] grid) {
         /**
