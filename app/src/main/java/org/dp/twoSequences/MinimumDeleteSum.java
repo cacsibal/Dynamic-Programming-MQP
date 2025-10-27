@@ -9,27 +9,27 @@ public class MinimumDeleteSum {
         /**
          * initialization
          */
-        int m = s1.length();
-        int n = s2.length();
+        int len1 = s1.length();
+        int len2 = s2.length();
 
-        int[][] dp = new int[m + 1][n + 1];
+        int[][] dp = new int[len1 + 1][len2 + 1];
 
         /**
          * base cases: if a string is empty, delete all characters from the other string
          */
-        for(int r = 1; r <= m; r++) {
+        for(int r = 1; r <= len1; r++) {
             dp[r][0] = dp[r - 1][0] + s1.charAt(r - 1);
         }
 
-        for(int c = 1; c <= n; c++) {
+        for(int c = 1; c <= len2; c++) {
             dp[0][c] = dp[0][c - 1] + s2.charAt(c - 1);
         }
 
         /**
          * optimization through iteration
          */
-        for(int r = 1; r <= m; r++) {
-            for(int c = 1; c <= n; c++) {
+        for(int r = 1; r <= len1; r++) {
+            for(int c = 1; c <= len2; c++) {
                 if(s1.charAt(r - 1) == s2.charAt(c - 1)) {
                     dp[r][c] = dp[r - 1][c - 1];
                 } else {
@@ -41,6 +41,6 @@ public class MinimumDeleteSum {
         /**
          * return the last element
          */
-        return dp[m][n];
+        return dp[len1][len2];
     }
 }
