@@ -39,7 +39,7 @@ public class Pascal {
         int s=r+c;
         Integer key = (s*(s+1))/2+r;
         if(!memo.containsKey(key)){
-            memo.put(key, solution(r-1,c-1)+ solution(r-1,c));
+            memo.put(key,solution(r-1,c-1)+solution(r-1,c));
         }
 
         return memo.get(key);
