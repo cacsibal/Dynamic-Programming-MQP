@@ -2,7 +2,7 @@ package org.dp.topDown;
 
 import java.util.HashMap;
 /**
- *  Pascal: Returns the number in pascal's triangle at row r and column c
+ *  Pascal: Returns the number in solution's triangle at row r and column c
  *
  *  dynprog solution:
  *  pasc <- {
