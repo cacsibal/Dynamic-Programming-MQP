@@ -16,6 +16,15 @@ class DoubleKnapsackTest {
         assertEquals(13,testDKP.solution(10,3,weights,values ));
     }
 
+    @Test
+    void test_2() {
+        DoubleKnapsack testDKP = new DoubleKnapsack();
+
+        int[] weights = new int[]{2,3,4,5,6};
+        int[] values = new int[]{3,4,5,8,10};
+        assertEquals(22,testDKP.solution(8,7,weights,values ));
+    }
+
 
 
 }
