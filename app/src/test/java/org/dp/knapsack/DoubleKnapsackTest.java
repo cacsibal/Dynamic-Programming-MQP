@@ -1,4 +1,4 @@
-package org.dp.topDown;
+package org.dp.knapsack;
 
 import org.junit.jupiter.api.Test;
 

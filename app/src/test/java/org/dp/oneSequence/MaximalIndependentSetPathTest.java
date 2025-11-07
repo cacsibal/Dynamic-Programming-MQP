@@ -1,4 +1,4 @@
-package org.dp.topDown;
+package org.dp.oneSequence;
 
 import org.junit.jupiter.api.Test;
 
