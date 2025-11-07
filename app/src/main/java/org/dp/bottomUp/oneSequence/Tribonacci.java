@@ -1,7 +1,5 @@
 package org.dp.bottomUp.oneSequence;
 
-// test commit to test github/discord webhook
-
 public class Tribonacci {
     public int solution(int n) {
         /**
