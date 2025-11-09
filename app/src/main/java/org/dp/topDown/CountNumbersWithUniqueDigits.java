@@ -1,6 +1,10 @@
 package org.dp.topDown;
 
 public class CountNumbersWithUniqueDigits {
+
+    /**
+     * Recursive solution
+     */
     public int solution(int n) {
         if(n==0){
             return 1;
