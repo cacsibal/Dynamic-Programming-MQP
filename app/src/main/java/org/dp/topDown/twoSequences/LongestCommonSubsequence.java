@@ -3,6 +3,7 @@ package org.dp.topDown.twoSequences;
 import java.util.Arrays;
 
 public class LongestCommonSubsequence {
+    // todo: use cantor pairing
     int[][] memo;
 
     public int solution(String s1, String s2) {

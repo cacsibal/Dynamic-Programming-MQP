@@ -38,6 +38,7 @@ public class LongestCommonSubsequence {
         return dp[len1][len2];
     }
 
+    // todo: align to make 0-based index
     public String retrieve() {
         int lcsLength = dp[len1][len2];
         char[] path = new char[lcsLength];
