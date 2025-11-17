@@ -22,12 +22,12 @@ public class UncrossedLines {
         /**
          * Iterative solution
          */
-        for(int r = 0; r < len1; r++) {
-            for(int c = 0; c < len2; c++) {
-                if(nums1[r] == nums2[c]) {
-                    dp[r + 1][c + 1] = dp[r][c] + 1;
+        for (int r = 1; r <= len1; r++) {
+            for (int c = 1; c <= len2; c++) {
+                if (nums1[r - 1] == nums2[c - 1]) {
+                    dp[r][c] = dp[r - 1][c - 1] + 1;
                 } else {
-                    dp[r + 1][c + 1] = Math.max(dp[r][c + 1], dp[r + 1][c]);
+                    dp[r][c] = Math.max(dp[r - 1][c], dp[r][c - 1]);
                 }
             }
         }

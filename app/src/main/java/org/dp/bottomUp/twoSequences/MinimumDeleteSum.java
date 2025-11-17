@@ -17,20 +17,20 @@ public class MinimumDeleteSum {
         /**
          * base cases: if a string is empty, delete all characters from the other string
          */
-        for(int r = 1; r <= len1; r++) {
+        for (int r = 1; r <= len1; r++) {
             dp[r][0] = dp[r - 1][0] + s1.charAt(r - 1);
         }
 
-        for(int c = 1; c <= len2; c++) {
+        for (int c = 1; c <= len2; c++) {
             dp[0][c] = dp[0][c - 1] + s2.charAt(c - 1);
         }
 
         /**
          * optimization through iteration
          */
-        for(int r = 1; r <= len1; r++) {
-            for(int c = 1; c <= len2; c++) {
-                if(s1.charAt(r - 1) == s2.charAt(c - 1)) {
+        for (int r = 1; r <= len1; r++) {
+            for (int c = 1; c <= len2; c++) {
+                if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
                     dp[r][c] = dp[r - 1][c - 1];
                 } else {
                     dp[r][c] = Math.min(dp[r - 1][c] + s1.charAt(r - 1), dp[r][c - 1] + s2.charAt(c - 1));
