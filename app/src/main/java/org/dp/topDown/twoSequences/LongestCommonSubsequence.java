@@ -1,26 +1,33 @@
 package org.dp.topDown.twoSequences;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class LongestCommonSubsequence {
-    // todo: use cantor pairing
-    int[][] memo;
+    Map<Integer,Integer> memo;
 
     public int solution(String s1, String s2) {
         int len1 = s1.length();
         int len2 = s2.length();
 
-        memo = new int[len1 + 1][len2 + 1];
-        for(int[] row : memo) Arrays.fill(row, -1);
+        memo = new HashMap<>();
 
         return helper(s1, s2, len1, len2);
     }
 
     public int helper(String s1, String s2, int r, int c) {
-        if(memo[r][c] != -1) return memo[r][c];
+        int k = (r + c) * (r + c + 1) / 2 + r;
+        if(memo.containsKey(k)) return memo.get(k);
         if(r == 0 || c == 0) return 0;
 
-        if(s1.charAt(r - 1) == s2.charAt(c - 1)) return helper(s1, s2, r - 1, c - 1) + 1;
-        else return Math.max(helper(s1, s2, r, c - 1), helper(s1, s2, r - 1, c));
+        int result;
+        if(s1.charAt(r - 1) == s2.charAt(c - 1)) {
+            result = helper(s1, s2, r - 1, c - 1) + 1;
+        }
+        else {
+            result = Math.max(helper(s1, s2, r, c - 1), helper(s1, s2, r - 1, c));
+        }
+
+        memo.put(k, result);
+        return result;
     }
 }
