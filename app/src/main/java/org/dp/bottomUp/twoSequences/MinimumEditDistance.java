@@ -11,6 +11,10 @@ public class MinimumEditDistance {
         int[][] dp = new int[len1 + 1][len2 + 1];
 
         /**
+         * Base Cases:
+         */
+
+        /**
          * iterative solution
          */
         for (int i = 0; i <= len1; i++) {

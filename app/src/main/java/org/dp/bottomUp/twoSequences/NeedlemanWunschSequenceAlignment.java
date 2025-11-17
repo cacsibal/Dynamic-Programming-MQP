@@ -18,6 +18,9 @@ public class NeedlemanWunschSequenceAlignment {
 
         int[][] dp = new int[len1 + 1][len2 + 1];
 
+        /**
+         * Base Cases:
+         */
         for(int r = 0; r <= len1; r++) {
             dp[r][0] = r * gap;
         }
