@@ -4,6 +4,8 @@ package org.dp.bottomUp.twoSequences;
  * Minimum Delete Sum: For two strings, find the minimum number of characters to be deleted to make the two strings equal.
  * <a href="https://leetcode.com/problems/minimum-delete-sum-for-two-strings/">...</a>
  */
+
+//GH server test commit: i can't commit to ep right now
 public class MinimumDeleteSum {
     public int solution(String s1, String s2) {
         /**
