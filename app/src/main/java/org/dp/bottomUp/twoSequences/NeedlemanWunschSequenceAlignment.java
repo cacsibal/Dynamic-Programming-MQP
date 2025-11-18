@@ -38,7 +38,7 @@ public class NeedlemanWunschSequenceAlignment {
 
                 dp[r][c] = Math.max(
                         dp[r - 1][c - 1] + score,
-                        Math.max(dp[r - 1][c], dp[r][c - 1])
+                        Math.max(dp[r - 1][c] + gap, dp[r][c - 1] + gap)
                 );
             }
         }
