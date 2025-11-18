@@ -22,6 +22,13 @@ public class LongestCommonSubsequence {
         /**
          * Base Cases: dp[0][...] and dp[...][0] are already 0 by default
          */
+        for(int r = 1; r <= len1; r++) {
+            dp[r][0] = 0;
+        }
+
+        for(int c = 1; c <= len2; c++) {
+            dp[0][c] = 0;
+        }
 
         /**
          * Iterative solution
