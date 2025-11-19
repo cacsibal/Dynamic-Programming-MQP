@@ -1,4 +1,4 @@
-package org.dp.oneSequence;
+package org.dp.bottomUp.oneSequence;
 
 public class LongestValidParentheses {
 

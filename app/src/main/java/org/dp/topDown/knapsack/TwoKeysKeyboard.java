@@ -1,4 +1,4 @@
-package org.dp.topDown;
+package org.dp.topDown.knapsack;
 import java.util.HashMap;
 
 public class TwoKeysKeyboard {

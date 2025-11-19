@@ -1,4 +1,4 @@
-package org.dp.topDown;
+package org.dp.topDown.oneSequence;
 
 public class CountNumbersWithUniqueDigits {
 

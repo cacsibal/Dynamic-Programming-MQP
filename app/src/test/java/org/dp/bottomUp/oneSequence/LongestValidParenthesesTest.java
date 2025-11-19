@@ -1,9 +1,7 @@
-package org.dp.oneSequence;
-
-import org.dp.topDown.OnesAndZeroes;
-import org.junit.jupiter.api.Test;
+package org.dp.bottomUp.oneSequence;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class LongestValidParenthesesTest {
 
