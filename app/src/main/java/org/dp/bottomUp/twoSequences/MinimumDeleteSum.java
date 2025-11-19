@@ -5,7 +5,6 @@ package org.dp.bottomUp.twoSequences;
  * <a href="https://leetcode.com/problems/minimum-delete-sum-for-two-strings/">...</a>
  */
 
-//GH server test commit: i can't commit to ep right now
 public class MinimumDeleteSum {
     public int solution(String s1, String s2) {
         /**
