@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - anton     # This workflow will only run on pushes to the 'devel' branch
+      - matt
+      - Michael
   pull_request:
     branches:
-      - Michael     # This workflow will only run on pull requests targeting the 'devel' branch
+      - anton     # This workflow will only run on pull requests targeting the 'devel' branch
+      - matt
+      - Michael
 
 jobs:
   build-and-test:

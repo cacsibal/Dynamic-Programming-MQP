@@ -1,5 +1,25 @@
 package org.dp.bottomUp.oneSequence;
 
+
+/**
+ *  Max Subarray: For a given array, find the largest possible increasing subsequence length
+ *
+ *  dynprog solution:
+ *
+ *  psnum <- 20
+ *  perfectsquares <- tail({
+ *      P[1] <- 1
+ *      P[n] <- ifelse(
+ *         sqrt(n)%%1==0,
+ *         1,
+ *         min(c(n,1+P[n-which(P[1:n]==1)]))
+ *         )
+ * }%where% {
+ *     n <- 1:psnum
+ *
+ * },1)
+ *
+ */
 class PerfectSquares {
     public int solution(int n) {
 
