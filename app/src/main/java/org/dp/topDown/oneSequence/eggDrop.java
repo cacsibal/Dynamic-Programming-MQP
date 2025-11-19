@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:app/src/main/java/org/dp/topDown/oneSequence/eggDrop.java
 package org.dp.topDown.oneSequence;
-========
-package org.dp.bottomUp.oneSequence;
->>>>>>>> main:app/src/main/java/org/dp/bottomUp/oneSequence/eggDrop.java
 
 public class eggDrop {
     // Function to find minimum number of attempts
