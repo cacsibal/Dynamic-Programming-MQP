@@ -20,14 +20,25 @@ public class LongestCommonSubsequence {
         dp = new int[len1 + 1][len2 + 1];
 
         /**
+         * Base Cases: dp[0][...] and dp[...][0] are already 0 by default
+         */
+        for(int r = 1; r <= len1; r++) {
+            dp[r][0] = 0;
+        }
+
+        for(int c = 1; c <= len2; c++) {
+            dp[0][c] = 0;
+        }
+
+        /**
          * Iterative solution
          */
-        for(int r = 0; r < len1; r++) {
-            for(int c = 0; c < len2; c++) {
-                if(s1.charAt(r) == s2.charAt(c)) {
-                    dp[r + 1][c + 1] = dp[r][c] + 1;
+        for (int r = 1; r <= len1; r++) {
+            for (int c = 1; c <= len2; c++) {
+                if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                    dp[r][c] = dp[r - 1][c - 1] + 1;
                 } else {
-                    dp[r + 1][c + 1] = Math.max(dp[r][c + 1], dp[r + 1][c]);
+                    dp[r][c] = Math.max(dp[r - 1][c], dp[r][c - 1]);
                 }
             }
         }
@@ -45,13 +56,13 @@ public class LongestCommonSubsequence {
         int r = len1, c = len2;
         int index = lcsLength - 1;
 
-        while(r > 0 && c > 0) {
-            if(s1.charAt(r - 1) == s2.charAt(c - 1)) {
+        while (r > 0 && c > 0) {
+            if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
                 path[index] = s1.charAt(r - 1);
                 index--;
                 r--;
                 c--;
-            } else if(dp[r - 1][c] > dp[r][c - 1]) {
+            } else if (dp[r - 1][c] > dp[r][c - 1]) {
                 r--;
             } else {
                 c--;
@@ -61,4 +72,3 @@ public class LongestCommonSubsequence {
         return new String(path);
     }
 }
-

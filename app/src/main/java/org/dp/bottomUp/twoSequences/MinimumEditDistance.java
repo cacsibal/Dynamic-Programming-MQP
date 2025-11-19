@@ -11,18 +11,25 @@ public class MinimumEditDistance {
         int[][] dp = new int[len1 + 1][len2 + 1];
 
         /**
+         * Base Cases:
+         */
+        for (int c = 1; c <= len2; c++) {
+            dp[0][c] = c;
+        }
+
+        for (int r = 1; r <= len1; r++) {
+            dp[r][0] = r;
+        }
+
+        /**
          * iterative solution
          */
-        for (int i = 0; i <= len1; i++) {
-            for (int j = 0; j <= len2; j++) {
-                if (i == 0) {
-                    dp[i][j] = j;
-                } else if (j == 0) {
-                    dp[i][j] = i;
-                } else if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
-                    dp[i][j] = dp[i - 1][j - 1];
+        for (int r = 1; r <= len1; r++) {
+            for (int c = 1; c <= len2; c++) {
+                if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                    dp[r][c] = dp[r - 1][c - 1];
                 } else {
-                    dp[i][j] = 1 + Math.min(dp[i - 1][j], Math.min(dp[i][j - 1], dp[i - 1][j - 1]));
+                    dp[r][c] = 1 + Math.min(dp[r - 1][c], Math.min(dp[r][c - 1], dp[r - 1][c - 1]));
                 }
             }
         }
