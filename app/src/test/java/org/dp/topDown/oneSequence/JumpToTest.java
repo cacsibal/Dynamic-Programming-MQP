@@ -10,14 +10,14 @@ class JumpToTest {
     void jumpTo() {
         JumpTo jumpTo = new JumpTo();
         int[] arr = {1,3,5,8,9,2,6,7,6,8, 9};
-        assertEquals(3, jumpTo.minJumps(arr));
+        assertEquals(3, jumpTo.solution(arr));
     }
 
     @Test
     void jumpTo2() {
         JumpTo jumpTo = new JumpTo();
         int[] arr = {0,10,20};
-        assertEquals(-1, jumpTo.minJumps(arr));
+        assertEquals(-1, jumpTo.solution(arr));
     }
 
 }
