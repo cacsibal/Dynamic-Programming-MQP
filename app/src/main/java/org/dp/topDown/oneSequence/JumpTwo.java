@@ -1,6 +1,6 @@
 package org.dp.topDown.oneSequence;
 
-public class JumpTo {
+public class JumpTwo {
 
     static int retrieveMax(int[] arr) {
         int max = 0;

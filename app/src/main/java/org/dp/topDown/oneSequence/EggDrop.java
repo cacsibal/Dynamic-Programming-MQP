@@ -1,6 +1,6 @@
 package org.dp.topDown.oneSequence;
 
-public class eggDrop {
+public class EggDrop {
     // Function to find minimum number of attempts
     // needed in order to find the critical floor
     public int solution(int n, int k) {

@@ -1,5 +1,5 @@
 package org.dp.bottomUp.oneSequence;
-public class coinChange {
+public class CoinChange {
 
     static long solution(long N, long[] Coins)
     {
