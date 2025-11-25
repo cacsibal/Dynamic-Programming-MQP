@@ -1,4 +1,4 @@
-package org.dp.topDown;
+package org.dp.topDown.twoSequences;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class WordBreakTest {
     @Test
     void WordBreak() {
         WordBreak wordBreak = new WordBreak();
-        assertTrue(wordBreak.wordBreak("leetcode", Arrays.asList("leet","code")));
-        assertFalse(wordBreak.wordBreak("catsandog", Arrays.asList("cats","dog","sand","and","cat")));
+        assertTrue(wordBreak.solution("leetcode", Arrays.asList("leet","code")));
+        assertFalse(wordBreak.solution("catsandog", Arrays.asList("cats","dog","sand","and","cat")));
     }
 }

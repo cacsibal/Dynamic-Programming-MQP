@@ -1,10 +1,10 @@
-package org.dp.topDown;
+package org.dp.topDown.twoSequences;
 
 import java.util.*;
 
 public class WordBreak {
 
-    public boolean wordBreak(String s, List<String> wordDict) {
+    public boolean solution(String s, List<String> wordDict) {
         Set<String> dict = new HashSet<>(wordDict);
         Boolean[] memo = new Boolean[s.length()];
         return helper(s, 0, dict, memo);
@@ -25,14 +25,6 @@ public class WordBreak {
 
         memo[start] = false;
         return false;
-    }
-
-    // todo: move test cases to java.org.dp."..."
-    public static void main(String[] args) {
-        WordBreak solver = new WordBreak();
-        System.out.println(solver.wordBreak("leetcode", Arrays.asList("leet","code"))); // true
-        System.out.println(solver.wordBreak("applepenapple", Arrays.asList("apple","pen"))); // true
-        System.out.println(solver.wordBreak("catsandog", Arrays.asList("cats","dog","sand","and","cat"))); // false
     }
 }
 

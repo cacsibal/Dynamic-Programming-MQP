@@ -1,8 +1,8 @@
-package org.dp.topDown;
+package org.dp.bottomUp.oneSequence;
 
 public class DecodeWays {
 
-    public int numDecodings(String s) {
+    public int solution(String s) {
         int n = s.length();
         int[] dp = new int[n];
         java.util.Arrays.fill(dp, -1);

@@ -1,8 +1,9 @@
-package org.dp.topDown;
+package org.dp.topDown.grid;
+
 import java.util.Arrays;
 
 public class DiceThrow {
-    static int countRecur(int m, int n, int x, int[][] memo) {
+    static int solution(int m, int n, int x, int[][] memo) {
 
         // Base case: Valid combination
         if (n == 0 && x == 0) return 1;
@@ -17,7 +18,7 @@ public class DiceThrow {
 
         // Check for all values of m.
         for (int i = 1; i <= m; i++) {
-            ans += countRecur(m, n - 1, x - i, memo);
+            ans += solution(m, n - 1, x - i, memo);
         }
 
         return memo[n][x] = ans;
@@ -28,6 +29,6 @@ public class DiceThrow {
         int[][] memo = new int[n + 1][x + 1];
         for (int[] row : memo) Arrays.fill(row, -1);
 
-        return countRecur(m, n, x, memo);
+        return solution(m, n, x, memo);
     }
 }
