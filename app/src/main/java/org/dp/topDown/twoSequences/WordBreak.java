@@ -5,6 +5,9 @@ import java.util.*;
 public class WordBreak {
 
     public boolean solution(String s, List<String> wordDict) {
+        /**
+         * initialization
+         */
         Set<String> dict = new HashSet<>(wordDict);
         Boolean[] memo = new Boolean[s.length()];
         return helper(s, 0, dict, memo);
@@ -14,7 +17,9 @@ public class WordBreak {
         if (start == s.length()) return true;
 
         if (memo[start] != null) return memo[start];
-
+/**
+ * iterative solution
+ */
         for (int end = start + 1; end <= s.length(); end++) {
             String word = s.substring(start, end);
             if (dict.contains(word) && helper(s, end, dict, memo)) {
