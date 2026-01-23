@@ -1,15 +1,20 @@
 package org.dp.bottomUp.twoSequences;
 
 public class DistinctSubsequences {
-    public int solution(String s1, String s2) {
-        /**
-         * initialization
-         */
-        int len1 = s1.length();
-        int len2 = s2.length();
+    String s1;
+    String s2;
+    int len1;
+    int len2;
+    int[][] dp;
 
-        int[][] dp = new int[len1 + 1][len2 + 1];
-
+    public DistinctSubsequences(String s1, String s2) {
+        this.s1 = s1;
+        this.s2 = s2;
+        len1 = s1.length();
+        len2 = s2.length();
+        dp = new int[len1 + 1][len2 + 1];
+    }
+    public int solution() {
         /**
          * base cases: each substring s1.substring(0, r) is its own subsequence
          */
@@ -34,5 +39,24 @@ public class DistinctSubsequences {
          * return the bottom right element
          */
         return dp[len1][len2];
+    }
+
+    public String retrieve() {
+        char[] path = new char[len2];
+        int r = len1, c = len2;
+        int index = len2 - 1;
+
+        while(r > 0 && c > 0) {
+            if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                path[index] = s1.charAt(r - 1);
+                index--;
+                r--;
+                c--;
+            } else {
+                r--;
+            }
+        }
+
+        return new String(path);
     }
 }

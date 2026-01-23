@@ -7,18 +7,15 @@ public class LongestCommonSubsequence {
     int len2;
     int[][] dp;
 
-    public int solution(String s1, String s2) {
-        /**
-         * Initialization
-         */
+    public LongestCommonSubsequence(String s1, String s2) {
         this.s1 = s1;
         this.s2 = s2;
-
-        len1 = s1.length();
-        len2 = s2.length();
-
+        this.len1 = s1.length();
+        this.len2 = s2.length();
         dp = new int[len1 + 1][len2 + 1];
+    }
 
+    public int solution() {
         /**
          * Base Cases: dp[0][...] and dp[...][0] are already 0 by default
          */
