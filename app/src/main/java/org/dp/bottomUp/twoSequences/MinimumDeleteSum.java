@@ -51,6 +51,7 @@ public class MinimumDeleteSum {
         return dp[len1][len2];
     }
 
+    // todo: review
     public String retrieve() {
         int commonLength = 0;
         int r = len1, c = len2;

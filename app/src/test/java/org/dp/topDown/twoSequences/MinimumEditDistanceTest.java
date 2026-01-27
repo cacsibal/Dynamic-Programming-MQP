@@ -9,7 +9,13 @@ public class MinimumEditDistanceTest {
      */
     @Test void test1() {
         MinimumEditDistance testEditDistance = new MinimumEditDistance("horse", "ros");
-        assertEquals(3, testEditDistance.solution());
+        int solution = testEditDistance.solution();
+        String retrieve = testEditDistance.retrieve();
+
+        assertAll(
+                () -> assertEquals(3, solution),
+                () -> assertEquals("ros", retrieve)
+        );
     }
 
     /**
@@ -17,6 +23,12 @@ public class MinimumEditDistanceTest {
      */
     @Test void test2() {
         MinimumEditDistance testEditDistance = new MinimumEditDistance("intention", "execution");
-        assertEquals(5, testEditDistance.solution());
+        int solution = testEditDistance.solution();
+        String retrieve = testEditDistance.retrieve();
+
+        assertAll(
+                () -> assertEquals(5, solution),
+                () -> assertEquals("execution", retrieve)
+        );
     }
 }

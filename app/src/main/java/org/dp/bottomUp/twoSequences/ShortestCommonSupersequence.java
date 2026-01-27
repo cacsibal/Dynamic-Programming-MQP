@@ -1,15 +1,21 @@
 package org.dp.bottomUp.twoSequences;
 
 public class ShortestCommonSupersequence {
-    public String solution(String s1, String s2) {
-        /**
-         * initialize
-         */
-        int len1 = s1.length();
-        int len2 = s2.length();
+    String s1;
+    String s2;
+    int len1;
+    int len2;
+    int[][] dp;
 
-        int[][] dp = new int[len1 + 1][len2 + 1];
+    public ShortestCommonSupersequence(String s1, String s2) {
+        this.s1 = s1;
+        this.s2 = s2;
+        len1 = s1.length();
+        len2 = s2.length();
+        dp = new int[len1 + 1][len2 + 1];
+    }
 
+    public String solution() {
         /**
          * base cases
          */

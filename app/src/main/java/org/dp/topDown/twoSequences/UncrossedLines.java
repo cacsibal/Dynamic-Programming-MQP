@@ -17,7 +17,7 @@ public class UncrossedLines {
         memo = new HashMap<>();
     }
 
-    public int solution(int[] nums1, int[] nums2) {
+    public int solution() {
         return helper(len1, len2);
     }
 

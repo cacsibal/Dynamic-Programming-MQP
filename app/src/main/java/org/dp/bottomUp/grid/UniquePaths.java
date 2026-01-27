@@ -14,9 +14,10 @@ public class UniquePaths {
         this.n = n;
         dp = new int[m][n];
     }
+
     public int solution() {
         /**
-         * optimization
+         * base cases
          */
         for(int r = 0; r < m; r++) {
             dp[r][0] = 1;

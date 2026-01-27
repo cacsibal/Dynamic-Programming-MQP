@@ -9,7 +9,13 @@ public class DistinctSubsequencesTest {
      */
     @Test void test1() {
         DistinctSubsequences testDistinctSubsequences = new DistinctSubsequences("rabbbit", "rabbit");
-        assertEquals(3, testDistinctSubsequences.solution());
+        int solution = testDistinctSubsequences.solution();
+        String retrieve = testDistinctSubsequences.retrieve();
+
+        assertAll(
+                () -> assertEquals(3, solution),
+                () -> assertEquals("rabbit", retrieve)
+        );
     }
 
     /**
@@ -17,6 +23,12 @@ public class DistinctSubsequencesTest {
      */
     @Test void test2() {
         DistinctSubsequences testDistinctSubsequences = new DistinctSubsequences("babgbag", "bag");
-        assertEquals(5, testDistinctSubsequences.solution());
+        int solution = testDistinctSubsequences.solution();
+        String retrieve = testDistinctSubsequences.retrieve();
+
+        assertAll(
+                () -> assertEquals(5, solution),
+                () -> assertEquals("bag", retrieve)
+        );
     }
 }

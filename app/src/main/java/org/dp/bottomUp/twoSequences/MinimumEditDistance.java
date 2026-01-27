@@ -46,6 +46,7 @@ public class MinimumEditDistance {
         return dp[len1][len2];
     }
 
+    // todo: review
     public String retrieve() {
         char[] path = new char[len2];
 
@@ -64,7 +65,7 @@ public class MinimumEditDistance {
             } else if(c > 0 && (r == 0 || dp[r][c] == dp[r][c - 1] + 1)) {
                 path[index--] = s2.charAt(c - 1);
                 c--;
-            } else if(r > 0) {
+            } else {
                 r--;
             }
         }

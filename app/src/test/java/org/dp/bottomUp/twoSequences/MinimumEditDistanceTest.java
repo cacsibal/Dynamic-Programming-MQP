@@ -27,7 +27,8 @@ public class MinimumEditDistanceTest {
         String retrieve = testEditDistance.retrieve();
 
         assertAll(
-                () -> assertEquals(5, solution)
+                () -> assertEquals(5, solution),
+                () -> assertEquals("execution", retrieve)
         );
     }
 }

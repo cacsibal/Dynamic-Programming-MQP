@@ -39,4 +39,22 @@ public class DistinctSubsequences {
 
         return result;
     }
+
+    public String retrieve() {
+        char[] path = new char[len2];
+        int r = len1, c = len2;
+        int index = len2 - 1;
+
+        while (r > 0 && c > 0) {
+            if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                path[index--] = s1.charAt(r - 1);
+                r--;
+                c--;
+            } else {
+                r--;
+            }
+        }
+
+        return new String(path);
+    }
 }

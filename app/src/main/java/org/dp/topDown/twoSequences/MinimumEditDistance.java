@@ -46,4 +46,45 @@ public class MinimumEditDistance {
         memo.put(k, result);
         return result;
     }
+
+    public String retrieve() {
+        char[] path = new char[len2];
+
+        int r = len1, c = len2;
+        int index = len2 - 1;
+
+        while(r > 0 || c > 0) {
+            if (r == 0) {
+                path[index--] = s2.charAt(c - 1);
+                c--;
+            } else if (c == 0) {
+                r--;
+            } else if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                path[index--] = s1.charAt(r - 1);
+                r--;
+                c--;
+            } else {
+                int k = (r + c) * (r + c + 1) / 2 + r;
+                int current = memo.get(k);
+
+                int kReplace = ((r - 1) + (c - 1)) * ((r - 1) + (c - 1) + 1) / 2 + (r - 1);
+                int kInsert = (r + (c - 1)) * (r + (c - 1) + 1) / 2 + r;
+
+                int replace = memo.getOrDefault(kReplace, Integer.MAX_VALUE);
+                int insert = memo.getOrDefault(kInsert, Integer.MAX_VALUE);
+
+                if (current == replace + 1) {
+                    path[index--] = s2.charAt(c - 1);
+                    r--;
+                    c--;
+                } else if (current == insert + 1) {
+                    path[index--] = s2.charAt(c - 1);
+                    c--;
+                } else {
+                    r--;
+                }
+            }
+        }
+        return new String(path);
+    }
 }
