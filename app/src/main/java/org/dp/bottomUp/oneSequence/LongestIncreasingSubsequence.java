@@ -17,12 +17,21 @@ package org.dp.bottomUp.oneSequence;
  *
  */
 public class LongestIncreasingSubsequence {
-    public int solution(int[] nums) {
+    int[] nums;
+    int[] dp;
+
+    public LongestIncreasingSubsequence(int [] nums){
+        this.nums = nums;
+        dp = new int[nums.length];
+    }
+
+
+    public int solution() {
 
         /**
          * Initialization
          */
-        int[] dp = new int[nums.length];
+
         int max=0;
         for(int i=0;i<dp.length;i++) {
             dp[i]=1;

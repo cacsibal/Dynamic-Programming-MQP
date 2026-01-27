@@ -18,7 +18,13 @@ package org.dp.bottomUp.oneSequence;
  *
  */
 class JumpGame2 {
-    public int solution(int[] nums) {
+
+    int[] nums;
+    public JumpGame2(int[] nums){
+        this.nums=nums;
+    }
+
+    public int solution() {
         /**
          * Edge case
          */

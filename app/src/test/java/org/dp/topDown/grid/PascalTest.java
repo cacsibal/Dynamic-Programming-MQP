@@ -8,16 +8,16 @@ class PascalTest {
 
     @Test
     void test4_2() {
-        Pascal testPascal = new Pascal();
+        Pascal testPascal = new Pascal(4,2);
 
-        assertEquals(6,testPascal.solution(4,2));
+        assertEquals(6,testPascal.solution());
     }
 
     @Test
     void test25_8() {
-        Pascal testPascal = new Pascal();
+        Pascal testPascal = new Pascal(25,8);
 
-        assertEquals(1081575, testPascal.solution(25,8));
+        assertEquals(1081575, testPascal.solution());
     }
 
 }

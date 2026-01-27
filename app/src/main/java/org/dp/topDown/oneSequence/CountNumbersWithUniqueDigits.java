@@ -2,10 +2,21 @@ package org.dp.topDown.oneSequence;
 
 public class CountNumbersWithUniqueDigits {
 
+
+    int n;
+    public CountNumbersWithUniqueDigits(int n){
+        this.n=n;
+    }
+
+    public int solution(){
+        return helper(n);
+    }
+
+
     /**
      * Recursive solution
      */
-    public int solution(int n) {
+    public int helper(int n) {
         if(n==0){
             return 1;
         }
@@ -13,6 +24,6 @@ public class CountNumbersWithUniqueDigits {
         for(int i=1;i<n;i++){
             p=p*(10-i);
         }
-        return p+solution(n-1);
+        return p+helper(n-1);
     }
 }

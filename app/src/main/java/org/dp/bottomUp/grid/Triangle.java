@@ -2,7 +2,15 @@ package org.dp.bottomUp.grid;
 import java.util.Collections;
 
 class Triangle {
-    public int solution(int[][] triangle) {
+
+    int[][] triangle;
+
+    public Triangle(int[][] triangle){
+        this.triangle=triangle;
+    }
+
+
+    public int solution() {
 
         /**
          * Iterative Solution

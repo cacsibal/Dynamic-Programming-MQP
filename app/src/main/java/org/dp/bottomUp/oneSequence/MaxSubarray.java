@@ -15,7 +15,13 @@ package org.dp.bottomUp.oneSequence;
  *
  */
 class MaxSubarray {
-    public int solution(int[] nums) {
+    int[] nums;
+
+    public MaxSubarray(int[] nums){
+        this.nums = nums;
+    }
+
+    public int solution() {
 
         /**
          * Initialization

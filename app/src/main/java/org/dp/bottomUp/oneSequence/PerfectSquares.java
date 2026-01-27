@@ -21,12 +21,19 @@ package org.dp.bottomUp.oneSequence;
  *
  */
 class PerfectSquares {
-    public int solution(int n) {
+    int n;
+    int[] dp;
 
+    public PerfectSquares(int n){
+        this.n=n;
+        dp=new int[n+1];
+    }
+
+    public int solution() {
         /**
          * Initializion
          */
-        int[] dp=new int[n+1];
+
         dp[0]=0;
 
         /**

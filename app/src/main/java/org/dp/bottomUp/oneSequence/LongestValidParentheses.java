@@ -2,7 +2,12 @@ package org.dp.bottomUp.oneSequence;
 
 public class LongestValidParentheses {
 
-    public int solution(String s) {
+    String s;
+    public LongestValidParentheses(String s){
+        this.s = s;
+    }
+
+    public int solution() {
         if(s.length() < 2){
             return 0;
         }

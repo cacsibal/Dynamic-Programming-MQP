@@ -22,8 +22,20 @@ public class Pascal {
      */
     private HashMap<Integer,Integer> memo = new HashMap<>();
 
+    int r;
+    int c;
 
-    public int solution(int r, int c) {
+    public Pascal(int r, int c){
+        this.r=r;
+        this.c=c;
+    }
+
+
+    public int solution(){
+        return helper(r,c);
+    }
+
+    public int helper(int r, int c) {
 
         /**
          * Base Case
@@ -39,7 +51,7 @@ public class Pascal {
         int s=r+c;
         Integer key = (s*(s+1))/2+r;
         if(!memo.containsKey(key)){
-            memo.put(key,solution(r-1,c-1)+solution(r-1,c));
+            memo.put(key,helper(r-1,c-1)+helper(r-1,c));
         }
 
         return memo.get(key);
