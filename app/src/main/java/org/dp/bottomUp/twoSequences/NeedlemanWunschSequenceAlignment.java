@@ -9,15 +9,26 @@ package org.dp.bottomUp.twoSequences;
  * characters are aligned column-wise.
  */
 public class NeedlemanWunschSequenceAlignment {
-    public int solution(String s1, String s2, int match, int mismatch, int gap) {
-        /**
-         * Initialization
-         */
-        int len1 = s1.length();
-        int len2 = s2.length();
+    String s1;
+    String s2;
+    int len1;
+    int len2;
+    int match;
+    int mismatch;
+    int gap;
+    int[][] dp;
 
-        int[][] dp = new int[len1 + 1][len2 + 1];
+    public NeedlemanWunschSequenceAlignment(String s1, String s2, int match, int mismatch, int gap) {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.match = match;
+        this.mismatch = mismatch;
+        this.gap = gap;
 
+        this.dp = new int[s1.length() + 1][s2.length() + 1];
+    }
+
+    public int solution() {
         /**
          * Base Cases:
          */

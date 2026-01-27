@@ -8,15 +8,15 @@ public class MinimumEditDistanceTest {
      * https://leetcode.com/problems/edit-distance/description/
      */
     @Test void test1() {
-        MinimumEditDistance testEditDistance = new MinimumEditDistance();
-        assertEquals(3, testEditDistance.solution("horse", "ros"));
+        MinimumEditDistance testEditDistance = new MinimumEditDistance("horse", "ros");
+        assertEquals(3, testEditDistance.solution());
     }
 
     /**
      * https://leetcode.com/problems/edit-distance/description/
      */
     @Test void test2() {
-        MinimumEditDistance testEditDistance = new MinimumEditDistance();
-        assertEquals(5, testEditDistance.solution("intention", "execution"));
+        MinimumEditDistance testEditDistance = new MinimumEditDistance("intention", "execution");
+        assertEquals(5, testEditDistance.solution());
     }
 }

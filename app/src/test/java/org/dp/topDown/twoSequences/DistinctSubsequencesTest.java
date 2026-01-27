@@ -8,15 +8,15 @@ public class DistinctSubsequencesTest {
      * https://leetcode.com/problems/distinct-subsequences/description/
      */
     @Test void test1() {
-        DistinctSubsequences testDistinctSubsequences = new DistinctSubsequences();
-        assertEquals(3, testDistinctSubsequences.solution("rabbbit", "rabbit"));
+        DistinctSubsequences testDistinctSubsequences = new DistinctSubsequences("rabbbit", "rabbit");
+        assertEquals(3, testDistinctSubsequences.solution());
     }
 
     /**
      * https://leetcode.com/problems/distinct-subsequences/description/
      */
     @Test void test2() {
-        DistinctSubsequences testDistinctSubsequences = new DistinctSubsequences();
-        assertEquals(5, testDistinctSubsequences.solution("babgbag", "bag"));
+        DistinctSubsequences testDistinctSubsequences = new DistinctSubsequences("babgbag", "bag");
+        assertEquals(5, testDistinctSubsequences.solution());
     }
 }

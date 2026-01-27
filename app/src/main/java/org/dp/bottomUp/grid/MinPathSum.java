@@ -18,13 +18,17 @@ package org.dp.bottomUp.grid;
  * </code>
  */
 public class MinPathSum {
-    public int solution(int[][] grid) {
-        /**
-         * Initialization
-         */
-        int len1 = grid.length;
-        int len2 = grid[0].length;
+    int[][] grid;
+    int len1;
+    int len2;
 
+    public MinPathSum(int[][] grid) {
+        this.grid = grid;
+        len1 = grid.length;
+        len2 = grid[0].length;
+    }
+
+    public int solution() {
         /**
          * Iterative Solution
          */

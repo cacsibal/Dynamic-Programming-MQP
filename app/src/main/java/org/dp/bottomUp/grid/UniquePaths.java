@@ -5,12 +5,16 @@ package org.dp.bottomUp.grid;
  * <a href="https://leetcode.com/problems/unique-paths/">...</a>
  */
 public class UniquePaths {
-    public int solution(int m, int n) {
-        /**
-         * initialization
-         */
-        int[][] dp = new int[m][n];
+    int m;
+    int n;
+    int[][] dp;
 
+    public UniquePaths(int m, int n) {
+        this.m = m;
+        this.n = n;
+        dp = new int[m][n];
+    }
+    public int solution() {
         /**
          * optimization
          */
