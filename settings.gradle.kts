@@ -10,5 +10,9 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
+<<<<<<< HEAD
 rootProject.name = "DP"
+=======
+rootProject.name = "Dynamic-Programming-MQP"
+>>>>>>> main
 include("app")

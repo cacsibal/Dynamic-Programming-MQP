@@ -3,10 +3,15 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - heineman     # This workflow will only run on pushes to the 'devel' branch
+      - anton     # workflows on these branches
+      - heineman
+      - matt
+      - Michael
   pull_request:
     branches:
-      - heineman     # This workflow will only run on pull requests targeting the 'devel' branch
+      - anton     # This workflow will only run on pull requests targeting the 'devel' branch
+      - matt
+      - Michael
 
 jobs:
   build-and-test:
