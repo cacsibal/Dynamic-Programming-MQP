@@ -20,6 +20,7 @@ package org.dp.bottomUp.oneSequence;
  * },1)
  *
  */
+@Deprecated   // use org.dp.integer.PerfectSquares instead
 class PerfectSquares {
     public int solution(int n) {
 
