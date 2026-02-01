@@ -13,7 +13,8 @@ class CountSquaresTest {
                 new int[] {0, 1, 1, 1}
         };
 
-        assertEquals(15, countSquares.solution(matrix));
+        // HEINEMAN: this fails
+        assertEquals(151, countSquares.solution(matrix));
     }
 
     @Test void test2() {
