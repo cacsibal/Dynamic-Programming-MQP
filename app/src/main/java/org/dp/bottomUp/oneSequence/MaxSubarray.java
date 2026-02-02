@@ -25,8 +25,6 @@ class MaxSubarray {
 
     public int solution() {
 
-
-
         /**
          * Iterative solution
          */

@@ -20,5 +20,6 @@ class MaxSubarrayTest {
         MaxSubarray testSubarray = new MaxSubarray(vals);
 
         assertEquals(6, testSubarray.solution());
+        System.out.println(testSubarray.retrieve());
     }
 }

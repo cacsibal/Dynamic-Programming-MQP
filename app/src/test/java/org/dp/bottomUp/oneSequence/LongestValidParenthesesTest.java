@@ -12,6 +12,7 @@ class LongestValidParenthesesTest {
         LongestValidParentheses testLVP = new LongestValidParentheses(s);
 
         assertEquals(4,testLVP.solution());
+        System.out.println(testLVP.retrieve());
     }
 
     /** https://leetcode.com/problems/longest-valid-parentheses/solutions/14133/my-dp-on-solution-without-using-stack-by-nsyp/ */
@@ -21,5 +22,6 @@ class LongestValidParenthesesTest {
         LongestValidParentheses testLVP = new LongestValidParentheses(s);
 
         assertEquals(6,testLVP.solution());
+
     }
 }
