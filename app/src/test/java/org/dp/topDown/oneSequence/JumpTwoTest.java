@@ -19,5 +19,18 @@ class JumpTwoTest {
         int[] arr = {0,10,20};
         assertEquals(-1, jumpTwo.solution(arr));
     }
+    @Test
+    void jumpTo3() {
+        JumpTwo jumpTwo = new JumpTwo();
+        int[] arr = {0,10,20};
+        assertEquals(-1, jumpTwo.solutiontwo(arr));
+    }
+
+    @Test
+    void jumpTo4() {
+        JumpTwo jumpTwo = new JumpTwo();
+        int[] arr = {1,3,5,8,9,2,6,7,6,8, 9};
+        assertEquals(3, jumpTwo.solutiontwo(arr));
+    }
 
 }
