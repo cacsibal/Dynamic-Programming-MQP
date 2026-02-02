@@ -7,5 +7,4 @@
  *  <li>Perfect Squares - {@link org.dp.integer.PerfectSquares}</li>
  * </ul>
  */
-
 package org.dp.integer;
