@@ -1,7 +1,7 @@
 package org.dp.bottomUp.grid;
 
 /**
- * Unique Paths: How many unique paths are there from top left to bottom right of an m x n grid?
+ * Unique Paths: How many unique paths are there from top left to bottom right of an m x n matrix?
  * <a href="https://leetcode.com/problems/unique-paths/">...</a>
  */
 public class UniquePaths {

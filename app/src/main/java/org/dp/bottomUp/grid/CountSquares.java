@@ -31,7 +31,7 @@ public class CountSquares {
         }
 
         /**
-         * Calculate the sum of all elements in the grid
+         * Calculate the sum of all elements in the matrix
          */
         int sum = 0;
         for(int r = 0; r < matrix.length; r++) {
@@ -41,7 +41,7 @@ public class CountSquares {
         }
 
         /**
-         * Return the sum of all elements in the grid
+         * Return the sum of all elements in the matrix
          */
         return sum;
     }
