@@ -1,45 +1,45 @@
 package org.dp.bottomUp.grid;
 
 /**
- * Minimum Path Sum: Given an m x n grid filled with non-negative numbers,
+ * Minimum Path Sum: Given an m x n matrix filled with non-negative numbers,
  * find a path from top left to bottom right which minimizes the sum of all numbers along its path.
  * (<a href="https://leetcode.com/problems/minimum-path-sum/">...</a>)
  *
  * <code>
  * minpath <- {
- *   M[1,1] <- grid[1,1]
- *   M[1,j] <- M[1, j-1] + grid[1,j]
- *   M[i,1] <- M[i-1, 1] + grid[i,1]
- *   M[i,j] <- min(M[i-1,j], M[i,j-1]) + grid[i,j]
+ *   M[1,1] <- matrix[1,1]
+ *   M[1,j] <- M[1, j-1] + matrix[1,j]
+ *   M[i,1] <- M[i-1, 1] + matrix[i,1]
+ *   M[i,j] <- min(M[i-1,j], M[i,j-1]) + matrix[i,j]
  * } %where% {
- *   i <- 1:nrow(grid)
- *   j <- 1:ncol(grid)
+ *   i <- 1:nrow(matrix)
+ *   j <- 1:ncol(matrix)
  * }
  * </code>
  */
 public class MinPathSum {
-    int[][] grid;
-    int len1;
-    int len2;
+    int[][] matrix;
+    int[][] dp;
 
-    public MinPathSum(int[][] grid) {
-        this.grid = grid;
-        len1 = grid.length;
-        len2 = grid[0].length;
+    public MinPathSum(int[][] matrix) {
+        this.matrix = matrix;
+        this.dp = new int[matrix.length][matrix[0].length];
     }
 
     public int solution() {
         /**
-         * Iterative Solution
+         * Iterative Solution with DP table
          */
-        for(int r = 0; r < len1; r++) {
-            for(int c = 0; c < len2; c++) {
-                if(r > 0 && c > 0) {
-                    grid[r][c] += Math.min(grid[r - 1][c], grid[r][c - 1]);
-                } else if(r > 0) {
-                    grid[r][0] += grid[r - 1][0];
-                } else if(c > 0) {
-                    grid[0][c] += grid[0][c - 1];
+        for(int r = 0; r < matrix.length; r++) {
+            for(int c = 0; c < matrix[0].length; c++) {
+                if(r == 0 && c == 0) {
+                    dp[r][c] = matrix[r][c];
+                } else if(r == 0) {
+                    dp[r][c] = dp[r][c - 1] + matrix[r][c];
+                } else if(c == 0) {
+                    dp[r][c] = dp[r - 1][c] + matrix[r][c];
+                } else {
+                    dp[r][c] = Math.min(dp[r - 1][c], dp[r][c - 1]) + matrix[r][c];
                 }
             }
         }
@@ -47,6 +47,6 @@ public class MinPathSum {
         /**
          * Return the bottom right element
          */
-        return grid[len1 - 1][len2 - 1];
+        return dp[matrix.length - 1][matrix[0].length - 1];
     }
 }
