@@ -16,21 +16,23 @@ package org.dp.bottomUp.grid;
  * } # returns the side length of the largest square
  */
 public class MaximalSquare {
-    public int solution(char[][] matrix) {
-        /**
-         * Initialization
-         */
-        int len1 = matrix.length;
-        int len2 = matrix[0].length;
+    char[][] matrix;
+    int[][] dp;
 
-        int[][] dp = new int[len1][len2];
-        int maxLength = 0;
+    public MaximalSquare(char[][] matrix) {
+        this.matrix = matrix;
 
+        dp = new int[matrix.length][matrix[0].length];
+    }
+
+    public int solution() {
         /**
          * Iterative solution
          */
-        for(int r = 0; r < len1; r++){
-            for(int c = 0; c < len2; c++){
+        int maxLength = 0;
+
+        for(int r = 0; r < matrix.length; r++){
+            for(int c = 0; c < matrix[0].length; c++){
                 if(r == 0 || c == 0 || matrix[r][c] == '0') {
                     if(matrix[r][c] == '1'){
                         dp[r][c] = 1;
