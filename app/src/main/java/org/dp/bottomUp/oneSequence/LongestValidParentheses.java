@@ -16,8 +16,8 @@ public class LongestValidParentheses {
 
         for(int i=1; i < s.length(); i++){
             if(s.charAt(i) == ')' &&
-                    i-dp[i-1][0]-1 >= 0 &&
-                    s.charAt(i-dp[i-1][0]-1) == '(')
+                i-dp[i-1][0]-1 >= 0 &&
+                s.charAt(i-dp[i-1][0]-1) == '(')
             {
                 dp[i][0] = dp[i-1][0] + 2 + ((i-dp[i-1][0]-2 >= 0)?dp[i-dp[i-1][0]-2][0]:0);
 
@@ -36,10 +36,7 @@ public class LongestValidParentheses {
         }
         else{
             if(y==0){
-
                return x-dp[x][0]+1+"-"+x;
-
-
             }
             else{
                 if(dp[x][0]>dp[x-1][1]){
