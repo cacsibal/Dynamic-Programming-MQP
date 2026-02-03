@@ -1,4 +1,4 @@
-package org.dp.topDown.oneSequence;
+package org.dp.oneSequence;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,14 +8,14 @@ class DeleteAndEarnTest {
 
     @Test
     void deleteAndEarn() {
-        DeleteAndEarn deleteAndEarn = new DeleteAndEarn();
         int[] input = {3,4,2};
-        assertEquals(6, deleteAndEarn.solution(input));
+        DeleteAndEarn deleteAndEarn = new DeleteAndEarn(input);
+        assertEquals(6, deleteAndEarn.solution());
     }
     @Test
     void deleteAndEarn1() {
-        DeleteAndEarn deleteAndEarn = new DeleteAndEarn();
         int[] input = {2,2,3,3,3,4};
-        assertEquals(9, deleteAndEarn.solution(input));
+        DeleteAndEarn deleteAndEarn = new DeleteAndEarn(input);
+        assertEquals(9, deleteAndEarn.solution());
     }
 }
