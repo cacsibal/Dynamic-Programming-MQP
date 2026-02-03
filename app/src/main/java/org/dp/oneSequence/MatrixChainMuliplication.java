@@ -46,22 +46,41 @@ class MatrixChainMultiplication {
         // Cost is 0 when multiplying one matrix. Diagonal elements are 0 by default.
         int[][] dp = new int[n + 1][n + 1];
 
-        // L is chain length.
-        for (int L = 2; L <= n; L++) {
-            for (int i = 1; i <= n - L + 1; i++) {
-                int j = i + L - 1;                         // Ending index
+        // P(i,j) = Min (k, P(i,k) + P(k+1,j) + cost of multiplying resulting two matrices) for (int k = i; k < j; k++) 
+        // P(i,i) = 0
 
-                dp[i][j] = Integer.MAX_VALUE;              // Initialize with infinity
-                for (int k = i; k < j; k++) {
-                    // Cost = dp[i][k] + dp[k+1][j] + dims[i-1] * dims[k] * dims[j]
-                    int cost = dp[i][k] + dp[k + 1][j] + A[i - 1] * A[k] * A[j];
-                    if (cost < dp[i][j]) {
-                        dp[i][j] = cost;
-                        decision.put(key(i,j), k);
-                    }
-                }
+        for (int c = 2; c <= n; c++) {                // these are the chain lengths BUT ALSO could be column
+          for (int r = 1; r <= n - c + 1; r++) {      // these are the row starts
+            int i = r;
+            int j = r + c - 1;                        // MAPPING into (i,j) problem
+            
+            dp[i][j] = Integer.MAX_VALUE;
+            for (int k = i; k < j; k++) {
+              int cost = dp[i][k] + dp[k + 1][j] + A[i - 1] * A[k] * A[j];
+              if (cost < dp[i][j]) {
+                dp[i][j] = cost;
+                decision.put(key(i,j), k);
+              }
             }
+          }
         }
+        
+      //   // L is chain length.
+      //   for (int L = 2; L <= n; L++) {
+      //       for (int i = 1; i <= n - L + 1; i++) {
+      //           int j = i + L - 1;                         // Ending index
+      //           System.out.println(i + "," + j);
+      //           dp[i][j] = Integer.MAX_VALUE;              // Initialize with infinity
+      //           for (int k = i; k < j; k++) {
+      //               // Cost = dp[i][k] + dp[k+1][j] + dims[i-1] * dims[k] * dims[j]
+      //               int cost = dp[i][k] + dp[k + 1][j] + A[i - 1] * A[k] * A[j];
+      //               if (cost < dp[i][j]) {
+      //                   dp[i][j] = cost;
+      //                   decision.put(key(i,j), k);
+      //               }
+      //           }
+      //       }
+      //   }
 
         return dp[1][n];
     }

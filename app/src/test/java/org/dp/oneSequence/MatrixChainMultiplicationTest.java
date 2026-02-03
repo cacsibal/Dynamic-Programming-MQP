@@ -35,7 +35,7 @@ class MatrixChainMultiplicationTest {
         int[] input = {40, 20, 30, 10, 30};
         MatrixChainMultiplication mcm = new MatrixChainMultiplication(input);
         
-        assertEquals(26000, mcm.solution());
+        assertEquals(26000, mcm.solution_bottomup());
         assertEquals("(()(()()))()", mcm.retrieve());    // ((A1(A2A3))A4)
     }
 }
