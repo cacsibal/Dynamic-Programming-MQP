@@ -14,7 +14,7 @@ import java.util.*;
  * 
  * Problem Decomposition:
  * 
- *    P(i,j) = Min (k, P(i,k) + P(k+1,j) + cost of multiplying resulting two matrices)
+ *    P(i,j) = Min (k, P(i,k) + P(k+1,j) + cost of multiplying resulting two matrices) for (int k = i; k < j; k++) {
  *    P(i,i) = 0
  * 
  * Input Type: Array<Integer> of N+1 values representing N matrices
@@ -31,12 +31,39 @@ class MatrixChainMultiplication {
     }
 
     /** Cantor pairing function with two integer parameters */
-    static int key(int i, int j) {
+    int key(int i, int j) {
       return (i+j)*(i+j+1)/2 + i;
     }
 
     public int solution() {
         return solution_topdown();  
+    }
+
+    public int solution_bottomup() {
+        int n = A.length - 1; // Number of matrices
+        
+        // dp[i][j] stores the minimum cost of multiplying matrices from i to j.
+        // Cost is 0 when multiplying one matrix. Diagonal elements are 0 by default.
+        int[][] dp = new int[n + 1][n + 1];
+
+        // L is chain length.
+        for (int L = 2; L <= n; L++) {
+            for (int i = 1; i <= n - L + 1; i++) {
+                int j = i + L - 1;                         // Ending index
+
+                dp[i][j] = Integer.MAX_VALUE;              // Initialize with infinity
+                for (int k = i; k < j; k++) {
+                    // Cost = dp[i][k] + dp[k+1][j] + dims[i-1] * dims[k] * dims[j]
+                    int cost = dp[i][k] + dp[k + 1][j] + A[i - 1] * A[k] * A[j];
+                    if (cost < dp[i][j]) {
+                        dp[i][j] = cost;
+                        decision.put(key(i,j), k);
+                    }
+                }
+            }
+        }
+
+        return dp[1][n];
     }
 
     public int solution_topdown() {

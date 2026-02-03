@@ -12,7 +12,11 @@ class MatrixChainMultiplicationTest {
         // https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1
         int[] input = {2, 1, 3, 4};
         MatrixChainMultiplication mcm = new MatrixChainMultiplication(input);
-        assertEquals(20, mcm.solution());
+        assertEquals(20, mcm.solution_bottomup());
+        assertEquals("()(()())", mcm.retrieve());    // (A1(A2A3))
+
+        mcm = new MatrixChainMultiplication(input);
+        assertEquals(20, mcm.solution_topdown());
         assertEquals("()(()())", mcm.retrieve());    // (A1(A2A3))
     }
 
