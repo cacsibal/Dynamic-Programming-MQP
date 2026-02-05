@@ -1,4 +1,4 @@
-package org.dp.bottomUp.grid;
+package org.dp.grid;
 
 public class CountSquares {
 
