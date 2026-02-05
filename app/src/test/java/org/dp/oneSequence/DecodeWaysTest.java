@@ -19,7 +19,6 @@ class DecodeWaysTest {
     @Test
     public void test3() {
         DecodeWays dw = new DecodeWays("123");
-        String[] result = {"ABC", "AW", "LC"};
         assertArrayEquals(new String[]{"ABC", "AW", "LC"}, dw.retrieve());
     }
 }
