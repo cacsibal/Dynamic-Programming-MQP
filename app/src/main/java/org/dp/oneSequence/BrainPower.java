@@ -1,4 +1,4 @@
-package org.dp.bottomUp.oneSequence;
+package org.dp.oneSequence;
 
 public class BrainPower {
     public long solution(int[][] questions) {

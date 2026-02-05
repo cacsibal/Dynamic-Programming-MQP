@@ -1,4 +1,4 @@
-package org.dp.topDown.grid;
+package org.dp.grid;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,13 +8,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class BellNumberTest {
     @Test
     void testSolution() {
-        BellNumber testcase = new BellNumber();
-        assertEquals(5, testcase.solution(3));
+        BellNumber testcase = new BellNumber(3);
+        assertEquals(5, testcase.solution());
     }
 
     @Test
     void testSolution2() {
-        BellNumber testcase = new BellNumber();
-        assertEquals(2, testcase.solution(2));
+        BellNumber testcase = new BellNumber(2);
+        assertEquals(2, testcase.solution());
     }
 }
