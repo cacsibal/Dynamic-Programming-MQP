@@ -1,4 +1,4 @@
-package org.dp.bottomUp.grid;
+package org.dp.grid;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

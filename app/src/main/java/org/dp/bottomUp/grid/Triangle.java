@@ -1,5 +1,4 @@
 package org.dp.bottomUp.grid;
-import java.util.Collections;
 
 class Triangle {
     public int solution(int[][] triangle) {
