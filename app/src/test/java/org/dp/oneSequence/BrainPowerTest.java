@@ -1,4 +1,4 @@
-package org.dp.bottomUp.oneSequence;
+package org.dp.oneSequence;
 
 import org.junit.jupiter.api.Test;
 

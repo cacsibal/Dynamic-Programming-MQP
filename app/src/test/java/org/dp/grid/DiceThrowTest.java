@@ -1,4 +1,4 @@
-package org.dp.topDown.grid;
+package org.dp.grid;
 
 
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ class DiceThrowTest {
 
     @Test
     void testDice(){
-        DiceThrow testDiceThrow = new DiceThrow();
-        assertEquals(25, testDiceThrow.solution(6,3,12));
+        DiceThrow testDiceThrow = new DiceThrow(6,3,12);
+        assertEquals(25, testDiceThrow.solution());
     }
 }
