@@ -8,15 +8,15 @@ class CountNumbersWithUniqueDigitsTest {
 
     @Test
     void test1() {
-        CountNumbersWithUniqueDigits testCNWUD = new CountNumbersWithUniqueDigits();
+        CountNumbersWithUniqueDigits testCNWUD = new CountNumbersWithUniqueDigits(2);
 
-        assertEquals(91, testCNWUD.solution(2));
+        assertEquals(91, testCNWUD.solution());
     }
 
     @Test
     void test2() {
-        CountNumbersWithUniqueDigits testCNWUD = new CountNumbersWithUniqueDigits();
+        CountNumbersWithUniqueDigits testCNWUD = new CountNumbersWithUniqueDigits(4);
 
-        assertEquals(5275, testCNWUD.solution(4));
+        assertEquals(5275, testCNWUD.solution());
     }
 }

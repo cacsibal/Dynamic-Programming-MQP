@@ -8,19 +8,21 @@ class CoinChangeTest {
 
     @Test
     void test_1() {
-        CoinChange testCC = new CoinChange();
+
 
         int[] coins = new int[]{1,2,5};
         int amount = 11;
-        assertEquals(3,testCC.solution(coins,amount));
+        CoinChange testCC = new CoinChange(coins,amount);
+        assertEquals(3,testCC.solution());
     }
 
     @Test
     void test_2() {
-        CoinChange testCC = new CoinChange();
+
 
         int[] coins = new int[]{411,412,413,414,415,416,417,418,419,420,421,422};
         int amount = 9864;
-        assertEquals(24,testCC.solution(coins,amount));
+        CoinChange testCC = new CoinChange(coins,amount);
+        assertEquals(24,testCC.solution());
     }
 }

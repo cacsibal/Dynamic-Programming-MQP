@@ -1,7 +1,6 @@
 package org.dp.oneSequence;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 class LongestValidParenthesesTest {
