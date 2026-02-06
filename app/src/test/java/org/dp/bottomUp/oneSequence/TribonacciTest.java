@@ -10,12 +10,14 @@ public class TribonacciTest {
      */
     @Test
     void test1() {
-        Tribonacci testTribonacci = new Tribonacci();
+        Tribonacci testTribonacci1 = new Tribonacci(0);
+        Tribonacci testTribonacci2 = new Tribonacci(1);
+        Tribonacci testTribonacci3 = new Tribonacci(2);
 
         assertAll(
-                () -> assertEquals(0, testTribonacci.solution(0)),
-                () -> assertEquals(1, testTribonacci.solution(1)),
-                () -> assertEquals(1, testTribonacci.solution(2))
+                () -> assertEquals(0, testTribonacci1.solution()),
+                () -> assertEquals(1, testTribonacci2.solution()),
+                () -> assertEquals(1, testTribonacci3.solution())
         );
     }
 
@@ -23,17 +25,17 @@ public class TribonacciTest {
      * <a href="https://oeis.org/wiki/Tribonacci_numbers#">trib(3) should equal 2</a>
      */
     @Test void test2() {
-        Tribonacci testTribonacci = new Tribonacci();
+        Tribonacci testTribonacci = new Tribonacci(3);
 
-        assertEquals(2, testTribonacci.solution(3));
+        assertEquals(2, testTribonacci.solution());
     }
 
     /**
      * <a href="https://oeis.org/wiki/Tribonacci_numbers#">trib(10) should equal 149</a>
      */
     @Test void test3() {
-        Tribonacci testTribonacci = new Tribonacci();
+        Tribonacci testTribonacci = new Tribonacci(10);
 
-        assertEquals(149, testTribonacci.solution(10));
+        assertEquals(149, testTribonacci.solution());
     }
 }

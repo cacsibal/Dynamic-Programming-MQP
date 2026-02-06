@@ -13,7 +13,7 @@ class MaximalSquareTest {
                 new int[] {1, 0, 0, 1, 0}
         };
         MaximalSquare testSquare = new MaximalSquare(matrix);
-        
+
         assertEquals(4, testSquare.solution_bottomup());
         assertArrayEquals(new int[]{2, 3}, testSquare.retrieve());
     }

@@ -1,7 +1,6 @@
 package org.dp.twoSequences;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 public class MinimumDeleteSumTest {
@@ -10,7 +9,13 @@ public class MinimumDeleteSumTest {
      */
     @Test void test1() {
         MinimumDeleteSum testDeleteSum = new MinimumDeleteSum("sea", "eat");
-        assertEquals(231, testDeleteSum.solution());
+        int solution = testDeleteSum.solution();
+//        String retrieve = testDeleteSum.retrieve();
+
+        assertAll(
+                () -> assertEquals(231, solution)
+//                () -> assertEquals("ea", retrieve)
+        );
     }
 
     /**
@@ -18,6 +23,12 @@ public class MinimumDeleteSumTest {
      */
     @Test void test2() {
         MinimumDeleteSum testDeleteSum = new MinimumDeleteSum("delete", "leet");
-        assertEquals(403, testDeleteSum.solution());
+        int solution = testDeleteSum.solution();
+//        String retrieve = testDeleteSum.retrieve();
+
+        assertAll(
+                () -> assertEquals(403, solution)
+//                () -> assertEquals("let", retrieve)
+        );
     }
 }
