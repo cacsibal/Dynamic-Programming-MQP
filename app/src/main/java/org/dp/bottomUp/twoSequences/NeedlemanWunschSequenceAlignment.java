@@ -24,8 +24,10 @@ public class NeedlemanWunschSequenceAlignment {
         this.match = match;
         this.mismatch = mismatch;
         this.gap = gap;
+        this.len1 = s1.length();
+        this.len2 = s2.length();
 
-        this.dp = new int[s1.length() + 1][s2.length() + 1];
+        this.dp = new int[len1 + 1][len2 + 1];
     }
 
     public int solution() {
