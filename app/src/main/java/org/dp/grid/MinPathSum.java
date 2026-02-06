@@ -1,4 +1,4 @@
-package org.dp.bottomUp.grid;
+package org.dp.grid;
 
 /**
  * Minimum Path Sum: Given an m x n grid filled with non-negative numbers,
@@ -18,7 +18,14 @@ package org.dp.bottomUp.grid;
  * </code>
  */
 public class MinPathSum {
-    public int solution(int[][] grid) {
+
+    int[][] grid;
+
+    public MinPathSum(int[][] grid){
+        this.grid = grid;
+    }
+
+    public int helper_bottomup() {
         /**
          * Initialization
          */
@@ -44,5 +51,13 @@ public class MinPathSum {
          * Return the bottom right element
          */
         return grid[len1 - 1][len2 - 1];
+    }
+
+    public int solution_bottomup(){
+        return helper_bottomup();
+    }
+
+    public int solution(){
+        return solution_bottomup();
     }
 }
