@@ -3,3 +3,9 @@ build
 gradlew
 gradlew.bat
 gradle/wrapper/gradle-wrapper.properties
+
+# Ignore compiled classed
+app/bin
+
+# ignore .vscode
+.vscode/

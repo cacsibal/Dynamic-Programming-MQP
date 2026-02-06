@@ -3,10 +3,16 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - anton     # This workflow will only run on pushes to the 'devel' branch
+      - anton     # workflows on these branches
+      - heineman
+      - matt
+      - Michael
   pull_request:
     branches:
       - anton     # This workflow will only run on pull requests targeting the 'devel' branch
+      - heineman
+      - matt
+      - Michael
 
 jobs:
   build-and-test:
@@ -17,10 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK 19
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '19'
           distribution: 'temurin' # Or 'adopt', 'oracle', etc.
           cache: 'gradle' # Caches Gradle dependencies
 

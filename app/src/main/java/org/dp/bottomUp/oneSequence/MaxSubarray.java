@@ -30,12 +30,13 @@ class MaxSubarray {
          */
         for(int i=0;i<nums.length;i++){
             if(i<1){
-                dp[i][0]=nums[0];
-                dp[i][1]=nums[0];
+                dp[i][0]=nums[0];//-> "take element 0"
+
+                dp[i][1]=nums[0];//-> ""
             }
             else{
-                dp[i][0]=Math.max(nums[i], dp[i-1][0]+nums[i]);
-                dp[i][1]=Math.max(dp[i][0], dp[i-1][1]);
+                dp[i][0]=Math.max(nums[i], dp[i-1][0]+nums[i]);//->findPath(i-1)+take i
+                dp[i][1]=Math.max(dp[i][0], dp[i-1][1]); //findPath()
             }
         }
 

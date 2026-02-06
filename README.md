@@ -9,4 +9,6 @@
 - naming: camelCase
 - tab = 4 spaces
 
-test commit to check pipeline
+### Testing
+
+Commit individual branches to check pipeline. Can Merge into main once passed.
