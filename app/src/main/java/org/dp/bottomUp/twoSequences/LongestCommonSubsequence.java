@@ -1,17 +1,17 @@
 package org.dp.bottomUp.twoSequences;
 
-public class UncrossedLines {
-    int[] nums1;
-    int[] nums2;
+public class LongestCommonSubsequence {
+    String s1;
+    String s2;
     int len1;
     int len2;
     int[][] dp;
 
-    public UncrossedLines(int[] nums1, int[] nums2) {
-        this.nums1 = nums1;
-        this.nums2 = nums2;
-        len1 = nums1.length;
-        len2 = nums2.length;
+    public LongestCommonSubsequence(String s1, String s2) {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.len1 = s1.length();
+        this.len2 = s2.length();
         dp = new int[len1 + 1][len2 + 1];
     }
 
@@ -32,7 +32,7 @@ public class UncrossedLines {
          */
         for (int r = 1; r <= len1; r++) {
             for (int c = 1; c <= len2; c++) {
-                if (nums1[r - 1] == nums2[c - 1]) {
+                if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
                     dp[r][c] = dp[r - 1][c - 1] + 1;
                 } else {
                     dp[r][c] = Math.max(dp[r - 1][c], dp[r][c - 1]);
@@ -41,21 +41,21 @@ public class UncrossedLines {
         }
 
         /**
-         * return bottom right element
+         * Return bottom right element
          */
         return dp[len1][len2];
     }
 
-    public int[] retrieve() {
-        int numLines = dp[len1][len2];
-        int[] path = new int[numLines];
+    public String retrieve() {
+        int lcsLength = dp[len1][len2];
+        char[] path = new char[lcsLength];
 
         int r = len1, c = len2;
-        int index = numLines - 1;
+        int index = lcsLength - 1;
 
         while (r > 0 && c > 0) {
-            if (nums1[r - 1] == nums2[c - 1]) {
-                path[index] = nums1[r - 1];
+            if (s1.charAt(r - 1) == s2.charAt(c - 1)) {
+                path[index] = s1.charAt(r - 1);
                 index--;
                 r--;
                 c--;
@@ -66,6 +66,6 @@ public class UncrossedLines {
             }
         }
 
-        return path;
+        return new String(path);
     }
 }
