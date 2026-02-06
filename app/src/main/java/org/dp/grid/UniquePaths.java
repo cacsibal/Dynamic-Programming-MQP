@@ -1,23 +1,27 @@
 package org.dp.grid;
 
 /**
- * Unique Paths: How many unique paths are there from top left to bottom right of an m x n matrix?
+ * Unique Paths: How many unique paths are there from top left to bottom right of an m x n grid?
  * <a href="https://leetcode.com/problems/unique-paths/">...</a>
  */
 public class UniquePaths {
+
     int m;
     int n;
-    int[][] dp;
 
-    public UniquePaths(int m, int n) {
+    public UniquePaths(int m, int n){
         this.m = m;
         this.n = n;
-        dp = new int[m][n];
     }
 
-    public int solution() {
+    public int helper_bottomup() {
         /**
-         * base cases
+         * initialization
+         */
+        int[][] dp = new int[m][n];
+
+        /**
+         * optimization
          */
         for(int r = 0; r < m; r++) {
             dp[r][0] = 1;

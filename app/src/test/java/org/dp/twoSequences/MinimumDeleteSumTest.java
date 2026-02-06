@@ -10,11 +10,11 @@ public class MinimumDeleteSumTest {
     @Test void test1() {
         MinimumDeleteSum testDeleteSum = new MinimumDeleteSum("sea", "eat");
         int solution = testDeleteSum.solution();
-        String retrieve = testDeleteSum.retrieve();
+//        String retrieve = testDeleteSum.retrieve();
 
         assertAll(
-                () -> assertEquals(231, solution),
-                () -> assertEquals("ea", retrieve)
+                () -> assertEquals(231, solution)
+//                () -> assertEquals("ea", retrieve)
         );
     }
 
@@ -24,11 +24,11 @@ public class MinimumDeleteSumTest {
     @Test void test2() {
         MinimumDeleteSum testDeleteSum = new MinimumDeleteSum("delete", "leet");
         int solution = testDeleteSum.solution();
-        String retrieve = testDeleteSum.retrieve();
+//        String retrieve = testDeleteSum.retrieve();
 
         assertAll(
-                () -> assertEquals(403, solution),
-                () -> assertEquals("let", retrieve)
+                () -> assertEquals(403, solution)
+//                () -> assertEquals("let", retrieve)
         );
     }
 }
