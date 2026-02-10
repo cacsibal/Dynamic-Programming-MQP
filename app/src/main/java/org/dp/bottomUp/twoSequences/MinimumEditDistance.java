@@ -1,6 +1,7 @@
 package org.dp.bottomUp.twoSequences;
 
 public class MinimumEditDistance {
+  
     String s1;
     String s2;
     int len1;
@@ -14,19 +15,20 @@ public class MinimumEditDistance {
         len2 = s2.length();
         dp = new int[len1 + 1][len2 + 1];
     }
-
+  
     public int solution() {
+        /** Base Cases: */
+        for (int c = 0; c <= len2; c++) { dp[0][c] = c; }
+        for (int r = 0; r <= len1; r++) { dp[r][0] = r; }
+  
         /**
-         * Base Cases:
+         * initialization
          */
-        for (int c = 0; c <= len2; c++) {
-            dp[0][c] = c;
-        }
+        int len1 = s1.length();
+        int len2 = s2.length();
 
-        for (int r = 0; r <= len1; r++) {
-            dp[r][0] = r;
-        }
-
+        int[][] dp = new int[len1 + 1][len2 + 1];
+      
         /**
          * iterative solution
          */

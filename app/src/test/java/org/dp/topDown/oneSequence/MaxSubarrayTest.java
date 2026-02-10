@@ -1,12 +1,14 @@
-package org.dp.bottomUp.oneSequence;
+package org.dp.topDown.oneSequence;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class MaxSubarrayTest {
     @Test
     void trivialTest() {
+        System.out.println("can anyone hear me?");
         int[] vals = new int[] {1,1,1,1,1};
         MaxSubarray testSubarray = new MaxSubarray(vals);
 
@@ -20,6 +22,5 @@ class MaxSubarrayTest {
         MaxSubarray testSubarray = new MaxSubarray(vals);
 
         assertEquals(6, testSubarray.solution());
-        System.out.println(testSubarray.retrieve());
     }
 }

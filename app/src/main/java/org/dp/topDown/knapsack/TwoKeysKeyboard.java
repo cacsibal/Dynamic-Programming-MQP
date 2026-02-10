@@ -8,14 +8,19 @@ public class TwoKeysKeyboard {
      */
     HashMap<Integer,Integer> memo = new HashMap<>();
 
-    public int solution(int n) {
+    int n;
+    public TwoKeysKeyboard(int n){
+        this.n=n;
+    }
+
+    public int solution() {
         if(n==1){
             return 0;
         }
-        return 1+helper(1,1,n);
+        return 1+helper(1,1);
 
     }
-    public int helper(int i, int j, int n){
+    public int helper(int i, int j){
         if(i==n){
             return 0;
         }
@@ -24,7 +29,7 @@ public class TwoKeysKeyboard {
         }
         int key = i*i+j;
         if(!memo.containsKey(key))
-            memo.put(key, Math.min(2+helper(2*i,i,n),1+helper(i+j,j,n)));
+            memo.put(key, Math.min(2+helper(2*i,i),1+helper(i+j,j)));
         return memo.get(key);
     }
 }
