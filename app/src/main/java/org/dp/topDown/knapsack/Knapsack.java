@@ -9,10 +9,19 @@ public class Knapsack {
      */
     private HashMap<Integer,Integer> memo = new HashMap<>();
 
-    public int solution(int W, int[] weights, int[] values){
-        return solutionR(weights.length-1, W, weights,values);
+    int[] weights;
+    int[] values;
+    int W;
+    public Knapsack(int W, int[] weights, int[] values){
+        this.W=W;
+        this.weights=weights;
+        this.values=values;
     }
-    public int solutionR(int i, int W, int[] weights, int[] values){
+
+    public int solution(){
+        return helper(weights.length-1, W);
+    }
+    public int helper(int i, int W){
         if(i==-1 || W==0){
             return 0;
         }
@@ -20,8 +29,8 @@ public class Knapsack {
         if(!memo.containsKey(key)){
             memo.put(key,
                     Math.max(
-                        solutionR(i-1,W, weights, values),
-                        weights[i]<=W?(values[i]+solutionR(i-1,W-weights[i],weights,values)):0
+                            helper(i-1,W),
+                        weights[i]<=W?(values[i]+helper(i-1,W-weights[i])):0
                     )
             );
         }

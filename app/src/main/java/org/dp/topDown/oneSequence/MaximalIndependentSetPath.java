@@ -9,15 +9,22 @@ public class MaximalIndependentSetPath {
      */
     private HashMap<Integer,Integer> memo = new HashMap<>();
 
-    public int solution(int[] path){
-        return helper(0,path);
+
+    int[] path;
+    public MaximalIndependentSetPath(int[] path){
+        this.path=path;
     }
-    public int helper(int i, int[] path){
+
+
+    public int solution(){
+        return helper(0);
+    }
+    public int helper(int i){
         if(i>=path.length){
             return 0;
         }
         if(!memo.containsKey(i)) {
-            memo.put(i,Math.max(path[i] + helper(i + 2, path), helper(i + 1, path)));
+            memo.put(i,Math.max(path[i] + helper(i + 2), helper(i + 1)));
         }
         return memo.get(i);
     }
