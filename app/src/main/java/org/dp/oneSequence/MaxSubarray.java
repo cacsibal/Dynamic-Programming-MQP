@@ -16,7 +16,7 @@ import org.dp.ITopDown;
  * Problem Decomposition:
  * 
  *    P(i,j) = nums[i] for i = j
- *    P(i,j) = max(P(i,j-1)+nums[j], nums[j]     ** still needs work...
+ *    P(i,j) = max(P(i,j-1) + nums[j], nums[j])     ** still needs work...
  * 
  * Input Type: Integer Array
  * Output Type: integer
