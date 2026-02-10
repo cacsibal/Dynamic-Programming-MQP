@@ -12,10 +12,14 @@ class MaximalSquareTest {
                 new int[] {1, 1, 1, 1, 1},
                 new int[] {1, 0, 0, 1, 0}
         };
+
         MaximalSquare testSquare = new MaximalSquare(matrix);
-        
-        assertEquals(4, testSquare.solution_bottomup());
+        assertEquals(2, testSquare.solution_bottomup());
         assertArrayEquals(new int[]{2, 3}, testSquare.retrieve());
+
+        MaximalSquare testSquare_td = new MaximalSquare(matrix);
+        assertEquals(2, testSquare_td.solution_topdown());
+        assertArrayEquals(new int[]{2, 3}, testSquare_td.retrieve());
     }
 
     /** https://leetcode.com/problems/maximal-square/description/ */
@@ -24,9 +28,13 @@ class MaximalSquareTest {
                 new int[] {0, 1},
                 new int[] {1, 0}
         };
-        MaximalSquare testSquare = new MaximalSquare(matrix);
 
+        MaximalSquare testSquare = new MaximalSquare(matrix);
         assertEquals(1, testSquare.solution_bottomup());
         assertArrayEquals(new int[]{0, 1}, testSquare.retrieve());
+
+        MaximalSquare testSquare_td = new MaximalSquare(matrix);
+        assertEquals(1, testSquare_td.solution_topdown());
+        assertArrayEquals(new int[]{0, 1}, testSquare_td.retrieve());
     }
 }

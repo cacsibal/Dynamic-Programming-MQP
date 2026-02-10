@@ -1,17 +1,22 @@
 package org.dp.bottomUp.oneSequence;
 
 public class Fibonacci {
-    public int solution(int n) {
+    int n;
+    int[] dp;
+
+    public Fibonacci(int n) {
+        this.n = n;
+
+        dp = new int[n + 1];
+    }
+
+    public int solution() {
         /**
          * Base Cases
          */
         if (n == 0) return 0;
         if (n == 1) return 1;
 
-        /**
-         * Initialization
-         */
-        int[] dp = new int[n + 1];
         dp[0] = 0;
         dp[1] = 1;
 
