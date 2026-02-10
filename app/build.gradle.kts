@@ -23,6 +23,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    // for the JavaParser library    
+    implementation("com.github.javaparser:javaparser-symbol-solver-core:3.28.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
