@@ -7,15 +7,23 @@ class CoinChange {
      * Create Cache
      */
     private HashMap<Integer,Integer> memo = new HashMap<>();
+    int[] coins;
+    int amount;
+    public CoinChange(int[] coins, int amount){
+        this.coins=coins;
+        this.amount=amount;
+    }
 
-    public int solution(int[] coins, int amount) {
-        int result= helper(0,coins,amount);
+
+
+    public int solution() {
+        int result= helper(0,amount);
         if(result>amount){
             return -1;
         }
         return result;
     }
-    public int helper(int i, int[] coins, int amount){
+    public int helper(int i, int amount){
 
         int key = (amount+i)*(amount+i+1)/2+i;
 
@@ -27,10 +35,10 @@ class CoinChange {
                 memo.put(key, Integer.MAX_VALUE/2);
             }
             else if(coins[i]>amount){
-                memo.put(key, helper(i+1, coins, amount));
+                memo.put(key, helper(i+1, amount));
             }
             else{
-                memo.put(key,Math.min(helper(i,coins,amount-coins[i])+1, helper(i+1,coins,amount)));
+                memo.put(key,Math.min(helper(i,amount-coins[i])+1, helper(i+1,amount)));
             }
         }
         return memo.get(key);

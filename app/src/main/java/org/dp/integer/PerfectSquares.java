@@ -1,5 +1,7 @@
 package org.dp.integer;
 
+import org.dp.*;
+
 /**
  * Name: Perfect Squares
  * Description:
@@ -31,7 +33,7 @@ package org.dp.integer;
  *
  * },1)
  */
-class PerfectSquares {
+class PerfectSquares implements ITopDown, IBottomUp, IRetrieveSolution {
 
     int n;
 

@@ -1,7 +1,15 @@
 package org.dp.bottomUp.oneSequence;
 
 public class Tribonacci {
-    public int solution(int n) {
+    int n;
+    int[] dp;
+
+    public Tribonacci(int n) {
+        this.n = n;
+        dp = new int[n + 1];
+    }
+
+    public int solution() {
         /**
          * Base cases
          */
