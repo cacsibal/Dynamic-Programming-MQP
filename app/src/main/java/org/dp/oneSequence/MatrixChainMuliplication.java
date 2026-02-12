@@ -49,6 +49,8 @@ class MatrixChainMultiplication {
         // P(i,j) = Min (k, P(i,k) + P(k+1,j) + cost of multiplying resulting two matrices) for (int k = i; k < j; k++) 
         // P(i,i) = 0
 
+        // not sure how the above translates into the code below!
+
         for (int c = 2; c <= n; c++) {                // these are the chain lengths BUT ALSO could be column
           for (int r = 1; r <= n - c + 1; r++) {      // these are the row starts
             int i = r;

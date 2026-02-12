@@ -8,14 +8,23 @@ public class OnesAndZeroes {
      */
     public HashMap<Integer, Integer> memo = new HashMap<>();
 
-    public int solution(String[] strs, int m, int n) {
-        return solutionR(0,strs,m,n);
+    String[] strs;
+    int m;
+    int n;
+    public OnesAndZeroes(String[] strs, int m, int n){
+        this.strs=strs;
+        this.m=m;
+        this.n=n;
+    }
+
+    public int solution() {
+        return helper(0,m,n);
     }
 
     /**
      * Recursive Solution
      */
-    public int solutionR(int i, String[] strs, int m, int n) {
+    public int helper(int i, int m, int n) {
         if(m<0||n<0){
             return Integer.MIN_VALUE;
         }
@@ -25,14 +34,14 @@ public class OnesAndZeroes {
         int p1 = (m+n)*(m+n+1)/2+n;
         int key = (p1+i)*(p1+i+1)/2+i;
         if(!memo.containsKey(key)){
-            Integer[] help = helper(strs[i]);
-            memo.put(key,Math.max(solutionR(i+1,strs,m,n),1+ solutionR(i+1,strs,m-help[0],n-help[1])));
+            Integer[] help = helper2(strs[i]);
+            memo.put(key,Math.max(helper(i+1,m,n),1+ helper(i+1,m-help[0],n-help[1])));
         }
         return memo.get(key);
     }
 
     public HashMap<String, Integer[]> memoc = new HashMap<>();
-    public Integer[] helper(String s){
+    public Integer[] helper2(String s){
         if(!memoc.containsKey(s)){
             int zero=0, one=0;
             for(int i = 0;i<s.length();i++){
