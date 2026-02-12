@@ -1,4 +1,4 @@
-package org.dp.topDown.grid;
+package org.dp.grid;
 
 import java.util.HashMap;
 /**
@@ -31,11 +31,11 @@ public class Pascal {
     }
 
 
-    public int solution(){
-        return helper(r,c);
+    public int solution_topdown(){
+        return helper_topdown(r,c);
     }
 
-    public int helper(int r, int c) {
+    public int helper_topdown(int r, int c) {
 
         /**
          * Base Case
@@ -51,9 +51,13 @@ public class Pascal {
         int s=r+c;
         Integer key = (s*(s+1))/2+r;
         if(!memo.containsKey(key)){
-            memo.put(key,helper(r-1,c-1)+helper(r-1,c));
+            memo.put(key,helper_topdown(r-1,c-1)+helper_topdown(r-1,c));
         }
 
         return memo.get(key);
+    }
+
+    public int solution(){
+        return solution_topdown();
     }
 }

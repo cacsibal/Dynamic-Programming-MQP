@@ -1,4 +1,4 @@
-package org.dp.topDown.grid;
+package org.dp.grid;
 
 
 import org.junit.jupiter.api.Test;

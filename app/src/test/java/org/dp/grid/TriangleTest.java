@@ -1,4 +1,4 @@
-package org.dp.bottomUp.grid;
+package org.dp.grid;
 
 import org.junit.jupiter.api.Test;
 
@@ -24,5 +24,12 @@ class TriangleTest {
         int[][] grid = new int[][]{{-10}};
         Triangle testTri = new Triangle(grid);
         assertEquals(-10,testTri.solution());
+    }
+    @Test
+    void test_3() {
+        int[][] grid = new int[][]{{2}, {3,7}, {8,5,6}, {6,1,9,3}};
+        Triangle testTri = new Triangle(grid);
+        int[] result = new int[]{2,3,5,1};
+        assertArrayEquals(result, testTri.retrieve());
     }
 }
