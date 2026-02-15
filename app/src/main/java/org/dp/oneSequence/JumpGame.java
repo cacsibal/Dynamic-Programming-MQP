@@ -1,5 +1,8 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
+
 import java.util.Arrays;
 
 /**
@@ -20,7 +23,7 @@ import java.util.Arrays;
  *  https://www.geeksforgeeks.org/dsa/minimum-number-of-jumps-to-reach-end-of-a-given-array/
  * 
  */
-class JumpGame {
+class JumpGame implements ITopDown, IBottomUp {
 
     int nums[];
 

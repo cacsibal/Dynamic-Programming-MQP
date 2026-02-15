@@ -1,5 +1,9 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.*;
 
 /**
@@ -22,7 +26,7 @@ import java.util.*;
  * Solution Type: String (parenthesization)
  * 
  */
-class MatrixChainMultiplication {
+class MatrixChainMultiplication implements IBottomUp, IRetrieveSolution, ITopDown {
 
     int[] A;
    

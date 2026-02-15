@@ -1,4 +1,6 @@
 package org.dp.oneSequence;
+import org.dp.ITopDown;
+
 import java.util.Arrays;
 
 /**
@@ -13,7 +15,7 @@ import java.util.Arrays;
  * maximum value: 6
  * Operation: delete 4 to get 4 points, then 3 is also deleted. Finally delete 2 to get 2 points
  */
-public class DeleteAndEarn {
+public class DeleteAndEarn implements ITopDown {
 
     int[] nums;
 

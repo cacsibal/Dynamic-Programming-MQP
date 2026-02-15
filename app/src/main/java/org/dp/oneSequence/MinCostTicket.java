@@ -1,5 +1,7 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+
 /**
  * Name Minimum Cost For Tickets
  *
@@ -17,7 +19,7 @@ package org.dp.oneSequence;
  * Return the minimum number of dollars you need to travel every day in the given list of days.
  */
 
-public class MinCostTicket {
+public class MinCostTicket implements IBottomUp {
 
     int[] days;
     int[] costs;

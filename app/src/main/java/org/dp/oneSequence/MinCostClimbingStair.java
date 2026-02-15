@@ -1,5 +1,9 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 /**
  * Name: Minimum cost to reach to the top
  * Description:
@@ -11,7 +15,7 @@ package org.dp.oneSequence;
  * cost[] = [1,100,1,1,1,100,1,1,100,1]
  * Minimum cost is 6. Start from step 0, skip all the 100
  */
-public class MinCostClimbingStair {
+public class MinCostClimbingStair implements ITopDown, IBottomUp{
 
     int[] cost;
 

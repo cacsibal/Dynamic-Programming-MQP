@@ -1,5 +1,9 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 /**
  *  Max Subarray: For a given array, find the largest possible increasing subsequence length
  *
@@ -16,7 +20,7 @@ package org.dp.oneSequence;
  * }
  *
  */
-public class LongestIncreasingSubsequence {
+public class LongestIncreasingSubsequence implements ITopDown, IBottomUp{
 
     int[] nums;
 

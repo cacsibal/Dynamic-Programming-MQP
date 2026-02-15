@@ -1,5 +1,9 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 /**
  * Name: Longest Valid Parentheses Substring
  * Description:
@@ -10,7 +14,7 @@ package org.dp.oneSequence;
  * s = "())"
  * output = 2 since the longest valid parenthesis substring is"()"
  */
-public class LongestValidParentheses {
+public class LongestValidParentheses implements ITopDown, IBottomUp{
 
     String s;
 

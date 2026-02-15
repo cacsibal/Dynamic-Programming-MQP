@@ -1,5 +1,9 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +20,7 @@ import java.util.Map;
  * (12,3) => LC
  * So for digit "123", there are total of 3 ways of decode
  */
-public class DecodeWays {
+public class DecodeWays implements ITopDown, IBottomUp, IRetrieveSolution {
 
     String digits;
 
