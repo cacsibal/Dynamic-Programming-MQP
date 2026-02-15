@@ -1,5 +1,8 @@
-package org.dp.bottomUp.oneSequence;
+package org.dp.oneSequence;
 
+
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
 
 /**
  *  Jump Game 2: For a given array representing how far forward you can jump from an index,
@@ -17,14 +20,14 @@ package org.dp.bottomUp.oneSequence;
  *  },1)
  *
  */
-class JumpGame2 {
+class JumpGame2 implements ITopDown, IBottomUp {
 
     int[] nums;
     public JumpGame2(int[] nums){
         this.nums=nums;
     }
 
-    public int solution() {
+    public int helper_bottomup() {
         /**
          * Edge case
          */
@@ -50,5 +53,36 @@ class JumpGame2 {
             lastDist=dist;
             dist=newdist;
         }
+    }
+
+    public int helper_topdown(int index) {
+        if(index >= nums.length-1){
+            return 0;
+        }
+
+        int ans = Integer.MAX_VALUE;
+        for(int i = index+1; i<= index+nums[index]; i++){
+            int val = helper_topdown(i);
+            if(val != Integer.MAX_VALUE){
+                ans = Math.min(ans, 1+val);
+            }
+        }
+        return ans;
+    }
+
+    public int solution_bottomup() {
+        return helper_bottomup();
+    }
+
+    public int solution_topdown() {
+        int ans = helper_topdown(0);
+        if(ans == Integer.MAX_VALUE){
+            return -1;
+        }
+        return ans;
+    }
+
+    public int solution(){
+        return solution_topdown();
     }
 }

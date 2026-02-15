@@ -1,6 +1,25 @@
-package org.dp.bottomUp.twoSequences;
+package org.dp.twoSequences;
 
-public class UncrossedLines {
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+
+/**
+ * Name: Uncrossed Line
+ * Description:
+ * given two integer arrays nums1 and nums2. We write the integers of nums1 and nums2
+ * (in the order they are given) on two separate horizontal lines.
+ *
+ * We may draw connecting lines: a straight line connecting two numbers nums1[i] and
+ * nums2[j] such that:
+ *
+ * nums1[i] == nums2[j], and
+ * the line we draw does not intersect any other connecting (non-horizontal) line.
+ * Note that a connecting line cannot intersect even at the endpoints (i.e., each number
+ * can only belong to one connecting line).
+ *
+ * Return the maximum number of connecting lines we can draw in this way.
+ */
+public class UncrossedLines implements IBottomUp , IRetrieveSolution {
     int[] nums1;
     int[] nums2;
     int len1;
@@ -15,7 +34,7 @@ public class UncrossedLines {
         dp = new int[len1 + 1][len2 + 1];
     }
 
-    public int solution() {
+    public int helper_bottomup() {
         /**
          * Base Cases: dp[0][...] and dp[...][0] are already 0 by default
          */
@@ -44,6 +63,14 @@ public class UncrossedLines {
          * return bottom right element
          */
         return dp[len1][len2];
+    }
+
+    public int solution_bottomup() {
+        return helper_bottomup();
+    }
+
+    public int solution(){
+        return solution_bottomup();
     }
 
     public int[] retrieve() {

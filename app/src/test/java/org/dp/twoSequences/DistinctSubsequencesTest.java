@@ -1,4 +1,4 @@
-package org.dp.bottomUp.twoSequences;
+package org.dp.twoSequences;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,6 +1,16 @@
-package org.dp.bottomUp.twoSequences;
+package org.dp.twoSequences;
 
-public class ShortestCommonSupersequence {
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
+/**
+ * Name: Shortest Common Supersequence
+ * Description:
+ * Given two strings s1 and s2, Find the length of
+ * the shortest string that has both s1 and s2 as subsequences.
+ */
+public class ShortestCommonSupersequence implements IBottomUp, ITopDown, IRetrieveSolution {
     String s1;
     String s2;
     int len1;
@@ -15,7 +25,56 @@ public class ShortestCommonSupersequence {
         dp = new int[len1 + 1][len2 + 1];
     }
 
-    public String solution() {
+    public int helper_topdown(int m, int n){
+        if(m == 0){
+            return n;
+        }
+
+        if(n == 0){
+            return m;
+        }
+
+        if(s1.charAt(m-1) == s2.charAt(n-1)){
+            return 1+ helper_topdown(m-1, n-1);
+        }
+
+        return 1+Math.min(helper_topdown(m, n-1), helper_topdown(m-1, n));
+    }
+
+    public int helper_bottomup() {
+        int m = len1;
+        int n = len2;
+
+        // If s2 is empty, take all of s1
+        for (int i = 0; i <= m; i++)
+            dp[i][0] = i;
+
+        // If s1 is empty, take all of s2
+        for (int j = 0; j <= n; j++)
+            dp[0][j] = j;
+
+        // Fill the dp table iteratively
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+
+                // If last chars match, include once
+                if (s1.charAt(i - 1) == s2.charAt(j - 1))
+                    dp[i][j] = 1 + dp[i - 1][j - 1];
+
+                    // If not match, take min of both options
+                else
+                    dp[i][j] = 1 + Math.min(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+
+        return dp[m][n];
+    }
+
+    public int solution_bottomup(){
+        return helper_bottomup();
+    }
+
+    public String retrieve() {
         /**
          * base cases
          */
@@ -76,5 +135,13 @@ public class ShortestCommonSupersequence {
         }
 
         return supersequence.reverse().toString();
+    }
+
+    public int solution_topdown() {
+        return helper_topdown(len1, len2);
+    }
+
+    public int solution(){
+        return solution_bottomup();
     }
 }
