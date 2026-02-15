@@ -1,4 +1,8 @@
 package org.dp.grid;
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.*;
 
 /**
@@ -12,7 +16,7 @@ import java.util.*;
  *
  * The triangular array contains 1 cell in 1st row, 2 cells in 2nd row and so on.
  */
-class Triangle {
+class Triangle implements ITopDown, IBottomUp, IRetrieveSolution {
 
     int[][] triangle;
 

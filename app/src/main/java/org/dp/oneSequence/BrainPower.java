@@ -1,5 +1,7 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+
 /**
  * Name: Solving Questions With Brainpower
  * Description:
@@ -12,7 +14,7 @@ package org.dp.oneSequence;
  * If instead, question 0 is skipped and question 1 is solved, you will earn 4 points but you will be unable to solve questions 2 and 3.
  * Return the maximum points you can earn for the exam.
  */
-public class BrainPower {
+public class BrainPower implements IBottomUp {
 
     int[][] questions;
 

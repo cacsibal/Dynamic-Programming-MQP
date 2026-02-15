@@ -1,6 +1,9 @@
-package org.dp.bottomUp.oneSequence;
+package org.dp.oneSequence;
 
-public class Tribonacci {
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
+
+public class Tribonacci implements ITopDown, IBottomUp {
     int n;
     int[] dp;
 
@@ -9,7 +12,7 @@ public class Tribonacci {
         dp = new int[n + 1];
     }
 
-    public int solution() {
+    public int helper_bottomup() {
         /**
          * Base cases
          */
@@ -36,5 +39,23 @@ public class Tribonacci {
          * Return the last element
          */
         return dp[n];
+    }
+
+    public int helper_topdown(int i){
+        if(i==0) return 0;
+        if(i==1) return 1;
+        if(i==2) return 1;
+        return helper_topdown(i-1) + helper_topdown(i-2) + helper_topdown(i-3);
+    }
+
+    public int solution_bottomup(){
+        return helper_bottomup();
+    }
+
+    public int solution_topdown(){
+        return helper_topdown(n);
+    }
+    public int solution(){
+        return solution_topdown();
     }
 }

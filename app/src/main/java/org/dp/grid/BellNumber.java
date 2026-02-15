@@ -1,4 +1,8 @@
 package org.dp.grid;
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.Arrays;
 
 /**
@@ -10,7 +14,7 @@ import java.util.Arrays;
  * n=2
  * number of ways = 2, since set {1,2} can be partition as {{1}, {2}} and {1,2}
  */
-public class BellNumber {
+public class BellNumber implements ITopDown, IBottomUp{
 
     int n;
 
@@ -18,7 +22,7 @@ public class BellNumber {
         this.n = n;
     }
 
-        public int helper(int n, int k, int[][] memo) {
+        public int helper_topdown(int n, int k, int[][] memo) {
 
             // Base cases
 
@@ -31,11 +35,11 @@ public class BellNumber {
             if (memo[n][k] != -1) return memo[n][k];
 
             // Recursive formula
-            memo[n][k] = k * helper(n - 1, k, memo) + helper(n - 1, k - 1, memo);
+            memo[n][k] = k * helper_topdown(n - 1, k, memo) + helper_topdown(n - 1, k - 1, memo);
             return memo[n][k];
         }
 
-    public int helper2() {
+    public int helper_bottomup() {
 
         // Create a 2D vector for Stirling numbers of the
         // second kind
@@ -84,13 +88,13 @@ public class BellNumber {
 
             // Sum up Stirling numbers S(n, k) for all k from 1 to n
             for (int k = 1; k <= n; ++k) {
-                result += helper(n, k, memo);
+                result += helper_topdown(n, k, memo);
             }
             return result;
         }
 
         public int solution_bottomup(){
-        return helper2();
+        return helper_bottomup();
         }
 
         public int solution(){

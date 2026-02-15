@@ -1,4 +1,4 @@
-package org.dp.bottomUp.oneSequence;
+package org.dp.oneSequence;
 
 import static org.junit.jupiter.api.Assertions.*;
 

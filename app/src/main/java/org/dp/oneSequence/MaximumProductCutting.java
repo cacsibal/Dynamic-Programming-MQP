@@ -1,5 +1,8 @@
 package org.dp.oneSequence;
 
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
+
 /**
  * Name: Maximum Product Cutting
  * Description:
@@ -10,7 +13,7 @@ package org.dp.oneSequence;
  * n = 10
  * maximum product is 3*3*4 = 36
  */
-public class MaximumProductCutting {
+public class MaximumProductCutting implements IBottomUp , ITopDown {
 
     int n;
 

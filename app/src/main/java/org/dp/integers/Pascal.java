@@ -1,5 +1,9 @@
 package org.dp.integers;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.HashMap;
 
 /**
@@ -31,7 +35,7 @@ import java.util.HashMap;
  *  }
  *
  */
-public class Pascal {
+public class Pascal implements ITopDown, IBottomUp, IRetrieveSolution {
 
     int r;
     int c;
@@ -53,11 +57,11 @@ public class Pascal {
     }
 
     public int solution_topdown() { 
-        decision = helper(r, c);     // Store decision for consistency with other DP problems
+        decision = helper_topdown(r, c);     // Store decision for consistency with other DP problems
         return decision;
     }
 
-    int helper(int ri, int ci)  {
+    int helper_topdown(int ri, int ci)  {
         /** Base Cases. */
         if (ci == 0) { return 1; }
         if (ri == 0) { return 0; }
@@ -70,7 +74,7 @@ public class Pascal {
         // P(r,c) = P(r-1,c-1) + P(r-1,c) otherwise
 
         if(!memo.containsKey(key)) {
-            int result = helper(ri-1,ci-1) + helper(ri-1,ci);
+            int result = helper_topdown(ri-1,ci-1) + helper_topdown(ri-1,ci);
             memo.put(key, result);
         }
 

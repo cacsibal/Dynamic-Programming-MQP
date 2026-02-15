@@ -1,8 +1,12 @@
 package org.dp.strings;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.HashMap;
 
-public class InterleavingStrings {
+public class InterleavingStrings implements ITopDown, IBottomUp, IRetrieveSolution {
     String s1, s2, s3;
 
     public InterleavingStrings(String s1, String s2, String s3) {

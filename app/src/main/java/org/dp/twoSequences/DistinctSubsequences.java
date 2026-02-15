@@ -1,6 +1,13 @@
-package org.dp.bottomUp.twoSequences;
+package org.dp.twoSequences;
 
-public class DistinctSubsequences {
+import org.dp.IBottomUp;
+
+/**
+ * Name: Count Distinct Subsequences
+ * Description:
+ * Given a string str, Find the number of distinct subsequences that can be formed from it.
+ */
+public class DistinctSubsequences implements IBottomUp {
     String s1;
     String s2;
     int len1;
@@ -14,7 +21,7 @@ public class DistinctSubsequences {
         len2 = s2.length();
         dp = new int[len1 + 1][len2 + 1];
     }
-    public int solution() {
+    public int helper_bottomup() {
         /**
          * base cases: each substring s1.substring(0, r) is its own subsequence
          */
@@ -39,6 +46,14 @@ public class DistinctSubsequences {
          * return the bottom right element
          */
         return dp[len1][len2];
+    }
+
+    public int solution_bottomup(){
+        return helper_bottomup();
+    }
+
+    public int solution(){
+        return solution_bottomup();
     }
 
     public String retrieve() {
