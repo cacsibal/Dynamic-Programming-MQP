@@ -1,5 +1,9 @@
 package org.dp.twoSequences;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 /**
  * Name: Edit Distance
  * Description:
@@ -13,7 +17,7 @@ package org.dp.twoSequences;
  * We can insert s into two consecutive 'e' in s1
  */
 
-public class MinimumEditDistance {
+public class MinimumEditDistance implements ITopDown, IBottomUp{
 
     String s1;
     String s2;

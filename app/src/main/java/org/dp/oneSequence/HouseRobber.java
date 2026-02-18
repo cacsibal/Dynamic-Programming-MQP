@@ -1,8 +1,10 @@
 package org.dp.oneSequence;
 
+import org.dp.ITopDown;
+
 import java.util.Arrays;
 
-public class HouseRobber {
+public class HouseRobber implements ITopDown {
 
     int[] array;
 

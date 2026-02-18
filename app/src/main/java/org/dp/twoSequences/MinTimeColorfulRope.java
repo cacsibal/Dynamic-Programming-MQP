@@ -1,5 +1,9 @@
 package org.dp.twoSequences;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 /**
  * Name: Minimum Time to Make Rope Colorful
  * Description:
@@ -15,7 +19,7 @@ package org.dp.twoSequences;
  * Return the minimum time Bob needs to make the rope colorful.
  */
 
-public class MinTimeColorfulRope {
+public class MinTimeColorfulRope implements ITopDown, IBottomUp{
 
     String colors;
     int[] neededTime;

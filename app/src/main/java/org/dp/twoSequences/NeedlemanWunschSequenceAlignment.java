@@ -1,4 +1,6 @@
-package org.dp.bottomUp.twoSequences;
+package org.dp.twoSequences;
+
+import org.dp.IBottomUp;
 
 /**
  * <a href=https://en.wikipedia.org/wiki/Sequence_alignment>Needleman-Wunsch Sequence Alignment:</a> a DP algorithm
@@ -8,7 +10,7 @@ package org.dp.bottomUp.twoSequences;
  * aligned nucleotide sequence residues are represented as rows of a matrix, and gaps are inserted between them so that similar
  * characters are aligned column-wise.
  */
-public class NeedlemanWunschSequenceAlignment {
+public class NeedlemanWunschSequenceAlignment implements IBottomUp {
     String s1;
     String s2;
     int len1;
@@ -30,7 +32,7 @@ public class NeedlemanWunschSequenceAlignment {
         this.dp = new int[len1 + 1][len2 + 1];
     }
 
-    public int solution() {
+    public int helper_bottomup() {
         /**
          * Base Cases:
          */
@@ -60,5 +62,13 @@ public class NeedlemanWunschSequenceAlignment {
          * return the last element
          */
         return dp[len1][len2];
+    }
+
+    public int solution_bottomup(){
+        return helper_bottomup();
+    }
+
+    public int solution(){
+        return solution_bottomup();
     }
 }

@@ -1,9 +1,13 @@
 package org.dp.twoSequences;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongestCommonSubsequence {
+public class LongestCommonSubsequence implements ITopDown, IBottomUp, IRetrieveSolution {
     String s1;
     String s2;
     int[][] dp = null;     // used by bottom-up

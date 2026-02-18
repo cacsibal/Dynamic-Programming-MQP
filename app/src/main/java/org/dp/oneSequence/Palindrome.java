@@ -1,4 +1,8 @@
 package org.dp.oneSequence;
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 import java.util.*;
 
 /**
@@ -12,7 +16,7 @@ import java.util.*;
  * minimum cut = 2
  * g|ee|k
  */
-public class Palindrome {
+public class Palindrome implements ITopDown, IBottomUp, IRetrieveSolution {
 
     String s;
 

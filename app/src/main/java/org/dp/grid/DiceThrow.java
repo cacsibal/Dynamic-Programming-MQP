@@ -1,4 +1,7 @@
 package org.dp.grid;
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
+
 import java.util.Arrays;
 
 /**
@@ -12,7 +15,7 @@ import java.util.Arrays;
  * there is only 1 way to get the sum 6 using 3 dices from 1 to 2
  */
 
-public class DiceThrow {
+public class DiceThrow implements ITopDown, IBottomUp {
 
     int m;
     int n;
@@ -23,7 +26,7 @@ public class DiceThrow {
         this.n = n;
         this.x = x;
     }
-    static int helper(int m, int n, int x, int[][] memo) {
+    static int helper_topdown(int m, int n, int x, int[][] memo) {
 
         // Base case: Valid combination
         /**
@@ -43,13 +46,13 @@ public class DiceThrow {
          * iterative
          */
         for (int i = 1; i <= m; i++) {
-            ans += helper(m, n - 1, x - i, memo);
+            ans += helper_topdown(m, n - 1, x - i, memo);
         }
 
         return memo[n][x] = ans;
     }
 
-    public int helper2() {
+    public int helper_bottomup() {
 
         // Create a 2D dp array with (n+1) rows and (x+1)
         // columns dp[i][j] will store the number of ways to
@@ -86,11 +89,11 @@ public class DiceThrow {
         int[][] memo = new int[n + 1][x + 1];
         for (int[] row : memo) Arrays.fill(row, -1);
 
-        return helper(m, n, x, memo);
+        return helper_topdown(m, n, x, memo);
     }
 
     public int solution_bottomup(){
-        return helper2();
+        return helper_bottomup();
     }
 
     public int solution(){

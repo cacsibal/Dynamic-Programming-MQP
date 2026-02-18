@@ -1,11 +1,15 @@
 package org.dp.twoSequences;
 
+import org.dp.IBottomUp;
+import org.dp.IRetrieveSolution;
+import org.dp.ITopDown;
+
 /**
  * Minimum Delete Sum: For two strings, find the minimum number of characters to be deleted to make the two strings equal.
  * <a href="https://leetcode.com/problems/minimum-delete-sum-for-two-strings/">...</a>
  */
 
-public class MinimumDeleteSum {
+public class MinimumDeleteSum implements ITopDown, IBottomUp{
 
     String s1;
     String s2;

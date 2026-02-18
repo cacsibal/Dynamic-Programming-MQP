@@ -1,5 +1,7 @@
 package org.dp.grid;
 
+import org.dp.ITopDown;
+
 import java.util.HashMap;
 /**
  *  Pascal: Returns the number in pascal's triangle at row r and column c
@@ -15,7 +17,7 @@ import java.util.HashMap;
  *  }
  *
  */
-public class Pascal {
+public class Pascal implements ITopDown {
 
     /**
      * Create Cache

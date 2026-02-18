@@ -1,5 +1,8 @@
 package org.dp.grid;
 
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
+
 /**
  * Minimum Path Sum: Given an m x n grid filled with non-negative numbers,
  * find a path from top left to bottom right which minimizes the sum of all numbers along its path.
@@ -17,7 +20,7 @@ package org.dp.grid;
  * }
  * </code>
  */
-public class MinPathSum {
+public class MinPathSum implements IBottomUp {
 
     int[][] grid;
 
