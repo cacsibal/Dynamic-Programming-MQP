@@ -1,6 +1,6 @@
 package org.dp.topDown.oneSequence;
 
-import org.dp.topDown.knapsack.TwoKeysKeyboard;
+import org.dp.oneSequence.TwoKeysKeyboard;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
