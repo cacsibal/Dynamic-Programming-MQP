@@ -1,8 +1,17 @@
-package org.dp.topDown.knapsack;
+package org.dp.knapsack;
+
+import org.dp.ITopDown;
 
 import java.util.HashMap;
 
-public class MultipleKnapsack {
+/**
+ * Name: Multiple Knapsack
+ * Description:
+ * Given int[] weight for each item's weight, int[] value for each item's value, and int[] W for
+ * the capacity for each bag, return the maximum value you can get without exceed each bag's
+ * capacity
+ */
+public class MultipleKnapsack implements ITopDown {
 
     /**
      * Create Cache
@@ -20,11 +29,11 @@ public class MultipleKnapsack {
     }
 
 
-    public int solution(){
-        return helper(weights.length-1, W);
+    public int solution_topdown(){
+        return helper_topdown(weights.length-1, W);
     }
 
-    public int helper(int i, int[] W){
+    public int helper_topdown(int i, int[] W){
         //Base Case
         if(i==-1 ){
             return 0;
@@ -43,13 +52,13 @@ public class MultipleKnapsack {
 
         //Recurse
         if(!memo.containsKey(key)){
-            int result = helper(i-1,W);
+            int result = helper_topdown(i-1,W);
             for(int j=0;j<W.length;j++){
                 if(weights[i]>W[j]){
                     continue;
                 }
                 W[j]-=weights[i];
-                result=Math.max(result, (values[i]+helper(i-1,W)));
+                result=Math.max(result, (values[i]+helper_topdown(i-1,W)));
                 W[j]+=weights[i];
             }
             memo.put(key,
@@ -66,5 +75,9 @@ public class MultipleKnapsack {
             result=(result+arr[i])*(result+arr[i]+1)/2+result;
         }
         return result;
+    }
+
+    public int solution(){
+        return solution_topdown();
     }
 }
