@@ -1,6 +1,6 @@
 package org.dp;
 
-public class ThreeStringLCS {
+public class ThreeStringLCS implements IBottomUp {
     String s1;
     String s2;
     String s3;
@@ -23,6 +23,10 @@ public class ThreeStringLCS {
     }
 
     public int solution() {
+        return solution_bottomup();
+    }
+
+    public int solution_bottomup() {
         for(int i = 0; i <= len1; i++){
             dp[i][0][0] = 0;
         }
