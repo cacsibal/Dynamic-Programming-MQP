@@ -7,14 +7,20 @@ import java.util.Arrays;
 /**
  * Name: Dice Throw
  * Description:
- * Given n dices each with m faces, numbered from 1 to m, find the number of ways to get sum x,
- * which is the summation of values on each face
+ * Given {@code n} dices each with {@code m} faces, numbered from 1 to {@code m},
+ * find the number of ways to get sum {@code x}, which is the summation of values
+ * on each face.
+ *
+ * <p>Fields:
+ * <ul>
+ *   <li>{@link #m} - number of faces per die</li>
+ *   <li>{@link #n} - number of dice</li>
+ *   <li>{@link #x} - target sum</li>
+ * </ul>
  *
  * Example:
- * m=2, n=3, x=6
- * there is only 1 way to get the sum 6 using 3 dices from 1 to 2
+ * {@code m=2, n=3, x=6} — there is only 1 way to get sum 6 using 3 dice with faces 1–2.
  */
-
 public class DiceThrow implements ITopDown, IBottomUp {
 
     int m;
