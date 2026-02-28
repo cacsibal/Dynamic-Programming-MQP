@@ -5,7 +5,8 @@ import org.dp.IRetrieveSolution;
 import org.dp.ITopDown;
 
 /**
- *  Max Subarray: For a given array, find the largest possible increasing subsequence length
+ *  Name: Max Subarray
+ *  Description: For a given array, find the largest possible increasing subsequence length
  *
  *  dynprog solution:
  *

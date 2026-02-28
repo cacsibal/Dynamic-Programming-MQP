@@ -6,12 +6,14 @@ import org.junit.jupiter.api.Test;
 
 
 class JumpGame2Test {
+
+    //https://leetcode.com/problems/jump-game-ii/description/
     @Test
     void TrivialTest(){
-        int[] vals = new int[]{1, 1, 1, 1};
+        int[] vals = new int[]{2,3,1,1,4};
         JumpGame2 testJumpGame = new JumpGame2(vals);
 
-        assertEquals(3, testJumpGame.solution());
+        assertEquals(2, testJumpGame.solution());
     }
 
     /** https://leetcode.com/problems/jump-game-ii/ */

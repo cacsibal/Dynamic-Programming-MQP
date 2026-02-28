@@ -4,7 +4,9 @@ import org.dp.ITopDown;
 
 import java.util.HashMap;
 /**
- *  Pascal: Returns the number in pascal's triangle at row r and column c
+ *  Name: Pascal
+ *  Description:
+ *  Returns the number in pascal's triangle at row r and column c
  *
  *  dynprog solution:
  *  pasc <- {

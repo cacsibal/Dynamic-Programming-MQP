@@ -5,7 +5,10 @@ import org.dp.IRetrieveSolution;
 import org.dp.ITopDown;
 
 /**
- * Minimum Delete Sum: For two strings, find the minimum number of characters to be deleted to make the two strings equal.
+ * Name: Minimum Delete Sum
+ * Description: For two strings, find the minimum number of characters to be deleted
+ * to make the two strings equal.
+ *
  * <a href="https://leetcode.com/problems/minimum-delete-sum-for-two-strings/">...</a>
  */
 

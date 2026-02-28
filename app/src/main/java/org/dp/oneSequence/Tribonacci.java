@@ -3,6 +3,16 @@ package org.dp.oneSequence;
 import org.dp.IBottomUp;
 import org.dp.ITopDown;
 
+/**
+ * Name: Tribonacci
+ * Description:
+ * Given a positive integer n, find the nth Fibonacci number.
+ *
+ * The Tribonacci series is a sequence where a term is the sum of previous
+ * three terms. The first three terms of the Fibonacci sequence are 0, 1, 1.
+ * The Fibonacci sequence: 0, 1, 1, 2, 4, 7, 13, 24, 44.
+ */
+
 public class Tribonacci implements ITopDown, IBottomUp {
     int n;
     int[] dp;
