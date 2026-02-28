@@ -3,6 +3,16 @@ package org.dp.oneSequence;
 import org.dp.IBottomUp;
 import org.dp.ITopDown;
 
+/**
+ * Name: Fibonacci Number
+ * Description:
+ * Given a positive integer n, find the nth Fibonacci number.
+ *
+ * The Fibonacci series is a sequence where a term is the sum of previous
+ * two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
+ * The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21.
+ */
+
 public class Fibonacci implements ITopDown, IBottomUp {
     int n;
     int[] dp;

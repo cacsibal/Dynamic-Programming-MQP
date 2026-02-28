@@ -4,7 +4,9 @@ import org.dp.IBottomUp;
 import org.dp.ITopDown;
 
 /**
- * Unique Paths: How many unique paths are there from top left to bottom right of an m x n grid?
+ * Name: Unique Paths
+ * Description:
+ * How many unique paths are there from top left to bottom right of an m x n grid?
  * <a href="https://leetcode.com/problems/unique-paths/">...</a>
  */
 public class UniquePaths implements IBottomUp, ITopDown {

@@ -4,6 +4,15 @@ import org.dp.ITopDown;
 
 import java.util.Arrays;
 
+/**
+ * Name: House Robber
+ * Description:
+ * Given an array arr[] where each element shows the amount of money in a row of houses
+ * built in a line. A robber wants to steal money, but cannot rob two houses adjacent to
+ * each other because it will set off an alarm.
+ *
+ * Find the maximum money the robber can steal without robbing two adjacent houses.
+ */
 public class HouseRobber implements ITopDown {
 
     int[] array;

@@ -61,8 +61,8 @@ class JumpGame2 implements ITopDown, IBottomUp {
         }
 
         int ans = Integer.MAX_VALUE;
-        for(int i = index+1; i<= index+nums[index]; i++){
-            int val = helper_topdown(i);
+        for(int j = index+1; j <= index+nums[index]; j++){
+            int val = helper_topdown(j);
             if(val != Integer.MAX_VALUE){
                 ans = Math.min(ans, 1+val);
             }

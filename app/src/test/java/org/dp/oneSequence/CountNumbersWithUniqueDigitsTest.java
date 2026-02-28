@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//https://leetcode.com/problems/count-numbers-with-unique-digits/description/
 class CountNumbersWithUniqueDigitsTest {
 
     @Test
