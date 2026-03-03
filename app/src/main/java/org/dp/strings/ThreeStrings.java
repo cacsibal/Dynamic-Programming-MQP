@@ -1,12 +1,15 @@
 package org.dp.strings;
 
+import org.dp.IBottomUp;
+import org.dp.ITopDown;
+
 /**
  * Name: LCS of three strings
  * Description:
  * Given three strings s1, s2, and s3, find the longest
  * common subsequence in all strings
  */
-public class ThreeStrings {
+public class ThreeStrings implements ITopDown, IBottomUp {
     String s1;
     String s2;
     String s3;
