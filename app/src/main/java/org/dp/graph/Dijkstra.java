@@ -1,5 +1,7 @@
 package org.dp.graph;
 
+import org.dp.IBottomUp;
+
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Arrays;
@@ -11,7 +13,7 @@ import java.util.Arrays;
  * We need to find the shortest path distances from the source vertex
  * to all other vertices in the graph.
  */
-public class Dijkstra {
+public class Dijkstra implements IBottomUp {
     ArrayList<ArrayList<int[]>> adj;
     int src;
 

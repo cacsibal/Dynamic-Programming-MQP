@@ -18,17 +18,16 @@ Run: ./gradlew run
 1. Brainpower: bottomup
 2. CoinChange: topdown, bottomup
 3. DecodeWays: topdown, bottomup, retrieve
-4. DeleteAndEarn: topdown
-5. EggDrop: topdown, bottomup
-6. HouseRobber: topdown
-7. JumpGame: topdown, bottomup
-8. LongestIncreasingSubsequence: topdown, bottomup 
-9. LongestValidParentheses: topdown, bottomup 
-10. MatrixChainMultiplication: topdown, bottomup, retrieve 
-11. MaxSubarray: topdown, bottomup, retrieve 
-12. MinCostClimbingStair: topdown, bottomup 
-13. MinCostTicket: bottomup 
-14. Palindrome: topdown, bottomup, retrieve
+4. DeleteAndEarn: topdown 
+5. HouseRobber: topdown 
+6. JumpGame: topdown, bottomup 
+7. LongestIncreasingSubsequence: topdown, bottomup 
+8. LongestValidParentheses: topdown, bottomup 
+9. MatrixChainMultiplication: topdown, bottomup, retrieve 
+10. MaxSubarray: topdown, bottomup, retrieve 
+11. MinCostClimbingStair: topdown, bottomup 
+12. MinCostTicket: bottomup 
+13. Palindrome: topdown, bottomup, retrieve
 
 ### Integer
 1. Fibonacci: topdown, bottomup
@@ -46,18 +45,16 @@ Run: ./gradlew run
 2. ThreeStrings: topdown, bottomup
 
 ### two sequence:
-1. DistinctSubsequences: bottomup
-2. Interleaving String: topdown, bottomup
-3. LongestCommonSubsequence: topdown, bottomup, retrieve
-4. MinimumDeleteSUm: topdown, bottomup
-5. MinimumEditDistance: topdown, bottomup
-6. MinTimeColorfulRope: topdown, bottomup
-7. SequenceAlignment: bottomup
-8. ShortestCommonSuperSequence: topdown, bottomup, retrieve
-9. UncrossedLine: bottomup, retrieve
-10. WildCarePatternMatching: topdown, bottomup
-11. Wordbreak: topdown, bottomup
-12. ThreeStrings: topdown, bottomup
+1. DistinctSubsequences: bottomup 
+2. LongestCommonSubsequence: topdown, bottomup, retrieve 
+3. MinimumDeleteSum: topdown, bottomup 
+4. MinimumEditDistance: topdown, bottomup 
+5. MinTimeColorfulRope: topdown, bottomup 
+6. SequenceAlignment: bottomup 
+7. ShortestCommonSuperSequence: topdown, bottomup, retrieve 
+8. UncrossedLine: bottomup, retrieve 
+9. WildCarePatternMatching: topdown, bottomup 
+10. Wordbreak: topdown, bottomup
 
 ### grid:
 1. Bellnumber: topdown, bottomup
@@ -76,5 +73,5 @@ Run: ./gradlew run
 4. OneAndZeros: topdown
 
 ### graph:
-1. MaximalIndependentSetPath
-2. Dijkstra
+1. MaximalIndependentSetPath: topdown, bottomup
+2. Dijkstra: bottomup
