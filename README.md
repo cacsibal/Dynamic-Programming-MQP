@@ -15,26 +15,35 @@ Run: ./gradlew run
 
 ## List of problem with solution implemented:
 ### one sequence:
-1. Finbonacci: topdown, bottomup
-2. Brainpower: bottomup
-3. CoinChange: topdown, bottomup
-4. CountUniqueDigits: topdown, bottomup
-5. DecodeWays: topdown, bottomup, retrieve
-6. DeleteAndEarn: topdown
-7. EggDrop: topdown, bottomup
-8. HouseRobber: topdown
-9. JumpGame: topdown, bottomup
-10. LongestIncreasingSubsequence: topdown, bottomup
-11. LongestValidParentheses: topdown, bottomup
-12. MatrixChainMultiplication: topdown, bottomup, retrieve
-13. MaximumProductCutting: topdown, bottomup
-14. MaxSubarray: topdown, bottomup, retrieve
-15. MinCostClimbingStair: topdown, bottomup
-16. MinCostTicket: bottomup
-17. Palindrome: topdown, bottomup, retrieve
-18. PerfectSquare: topdown, bottomup
-19. Tribonacci: topdown, bottomup
-20. TwoKeysKeyboard: topdown
+1. Brainpower: bottomup
+2. CoinChange: topdown, bottomup
+3. DecodeWays: topdown, bottomup, retrieve
+4. DeleteAndEarn: topdown
+5. EggDrop: topdown, bottomup
+6. HouseRobber: topdown
+7. JumpGame: topdown, bottomup
+8. LongestIncreasingSubsequence: topdown, bottomup 
+9. LongestValidParentheses: topdown, bottomup 
+10. MatrixChainMultiplication: topdown, bottomup, retrieve 
+11. MaxSubarray: topdown, bottomup, retrieve 
+12. MinCostClimbingStair: topdown, bottomup 
+13. MinCostTicket: bottomup 
+14. Palindrome: topdown, bottomup, retrieve
+
+### Integer
+1. Fibonacci: topdown, bottomup
+2. CountNumberUniqueDigits: topdown, bottomup
+3. MaximumProductCutting: topdown, bottomup
+4. PerfectSquares: topdown, bottomup, retrieve
+5. Tribonacci: topdown, bottomup
+6. TwoKeysKeyboard: topdown
+
+### Integers
+1. EggDrop: topdown, bottomup
+
+### Strings
+1. Interleaving Strings: topdown, bottomup, retrieve
+2. ThreeStrings: topdown, bottomup
 
 ### two sequence:
 1. DistinctSubsequences: bottomup
