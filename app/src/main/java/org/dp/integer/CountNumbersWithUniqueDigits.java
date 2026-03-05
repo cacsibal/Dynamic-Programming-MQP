@@ -1,4 +1,4 @@
-package org.dp.oneSequence;
+package org.dp.integer;
 
 import org.dp.IBottomUp;
 import org.dp.ITopDown;

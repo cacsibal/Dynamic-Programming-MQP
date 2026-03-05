@@ -1,4 +1,4 @@
-package org.dp.oneSequence;
+package org.dp.integers;
 
 import org.junit.jupiter.api.Test;
 
