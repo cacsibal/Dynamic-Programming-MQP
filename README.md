@@ -1,7 +1,10 @@
 # Dynamic-Programming-MQP
 
-- A collection of dynamic programming solution for problems used in MQP
-- This repository contains implementations of dynamic programming algorithms in Java
+Our project goal is to categorize different dynamic problem type, and implemente them with  
+the top-down approach and the bottom-up approach. These two approaches solve 
+the same problems but differ in how they compute and store intermediate 
+results. By implementing both approaches, the project evaluates their differences in structure, 
+readability, and computational performance.
 
 Tools:
 - Java JDK 17+
