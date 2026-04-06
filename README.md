@@ -6,6 +6,8 @@ the same problems but differ in how they compute and store intermediate
 results. By implementing both approaches, the project evaluates their differences in structure, 
 readability, and computational performance.
 
+View our work in automatically generating these problems in https://github.com/combinators/expression-problem/tree/IL-DP
+
 Tools:
 - Java JDK 17+
 - Gradle
@@ -16,7 +18,7 @@ Run: ./gradlew run
 
 
 
-## List of problem with solution implemented:
+## List of problems with solution implemented:
 ### one sequence:
 1. Brainpower: bottomup
 2. CoinChange: topdown, bottomup
