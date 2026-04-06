@@ -18,7 +18,7 @@ Run: ./gradlew run
 
 
 
-## List of problems with solution implemented:
+## List of problems with solutions implemented:
 ### one sequence:
 1. Brainpower: bottomup
 2. CoinChange: topdown, bottomup
